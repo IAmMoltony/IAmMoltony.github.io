@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moltony's Website</title>
+
+    <style>
+        *
+        {
+            font-family: sans-serif;
+        }
+
+        html, body
+        {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+        }
+
+        #container
+        {
+            display: flex;
+            flex-flow: column;
+            height: 100%;
+            width: 80%;
+            border-left: 3px solid #bbbbbb;
+            border-right: 3px solid #bbbbbb;
+            margin: auto;
+            box-shadow: 0px 0px 20px black;
+        }
+
+        #container-inner
+        {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        #heading
+        {
+            text-align: center;
+            width: 100%;
+            border-bottom: 3px solid #bbbbbb;
+            padding-bottom: 20px;
+        }
+
+        #projects
+        {
+            margin-left: 15px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #projects tr
+        {
+            border: 3px solid #bbbbbb;
+        }
+
+        .project-image
+        {
+            padding: 0px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .project-image img
+        {
+            max-width: inherit;
+            max-height: inherit;
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+            vertical-align: middle;
+            image-rendering: pixelated;
+        }
+
+        .project-description
+        {
+            padding-left: 10px;
+            vertical-align: top;
+        }
+
+        .project-description-text
+        {
+            padding-left: 20px;
+        }
+
+        .subheading
+        {
+            margin-left: 10px;
+            text-decoration: underline;
+            text-decoration-color: #aaaaaa;
+        }
+
+        a
+        {
+            text-decoration: none;
+        }
+
+        a:hover
+        {
+            color: red;
+        }
+
+        a:visited
+        {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 id="heading">Moltony's Website</h1>
+        <div id="container-inner">
+            <p>Hi, I'm Moltony. Welcome to my website.</p>
+            <h2 class="subheading">My projects</h2>
+
+            <table id="projects">
+                <tr>
+                    <td class="project-image"><img src="ds-craft-icon.bmp" alt="DS-Craft Icon"></td>
+                    <td class="project-description">
+                        <h3 class="subheading">DS-Craft</h3>
+                        <span class="project-description-text">
+                            A Minecraft clone for Nintendo DS.
+                            <a href="https://github.com/IAmMoltony/ds-craft">GitHub</a> |
+                            <a href="./ds-craft/index.html">Home page</a>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+
+            <h2 class="subheading">Other links</h2>
+
+            <ul>
+                <li><a href="https://github.com/IAmMoltony">My GitHub</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
