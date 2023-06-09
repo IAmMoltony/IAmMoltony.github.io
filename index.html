@@ -31,6 +31,63 @@
             box-shadow: 0px 0px 20px black;
         }
 
+        .mobile-only
+        {
+            display: none;
+        }
+
+        .desktop-only
+        {
+            display: block;
+        }
+
+        .subheading
+        {
+            margin-left: 10px;
+            text-decoration: underline;
+            text-decoration-color: #aaaaaa;
+        }
+
+        @media only screen and (max-width: 480px)
+        {
+            #container
+            {
+                width: 100%;
+            }
+
+            .mobile-only
+            {
+                display: block;
+            }
+
+            .desktop-only
+            {
+                display: none;
+            }
+
+            .subheading
+            {
+                text-align: center;
+            }
+
+            .project-heading
+            {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .project-heading img
+            {
+                vertical-align: middle;
+            }
+
+            .project-heading-text
+            {
+                margin-left: 10px;
+            }
+        }
+
         #container-inner
         {
             margin-left: 20px;
@@ -50,6 +107,7 @@
             margin-left: 15px;
             width: 100%;
             border-collapse: collapse;
+            display: table;
         }
 
         #projects tr
@@ -86,13 +144,6 @@
             padding-left: 20px;
         }
 
-        .subheading
-        {
-            margin-left: 10px;
-            text-decoration: underline;
-            text-decoration-color: #aaaaaa;
-        }
-
         a
         {
             text-decoration: none;
@@ -115,8 +166,9 @@
         <div id="container-inner">
             <p>Hi, I'm Moltony. Welcome to my website.</p>
             <h2 class="subheading">My projects</h2>
+            <hr class="mobile-only">
 
-            <table id="projects">
+            <table id="projects" class="desktop-only">
                 <tr>
                     <td class="project-image"><img src="./ds-craft-icon.bmp" alt="DS-Craft Icon"></td>
                     <td class="project-description">
@@ -130,6 +182,19 @@
                 </tr>
             </table>
 
+            <div class="mobile-only">
+                <div class="project-heading">
+                    <img src="./ds-craft-icon.bmp" alt="">
+                    <div class="project-heading-text">DS-Craft</div>
+                </div>
+                <p style="text-align: center;">
+                    A Minecraft clone for Nintendo DS. <br>
+                    <a href="https://github.com/IAmMoltony/ds-craft">Github</a> |
+                    <a href="./ds-craft/index.html">Home page</a>
+                </p>
+            </div>
+
+            <hr class="mobile-only">
             <h2 class="subheading">Other links</h2>
 
             <ul>
