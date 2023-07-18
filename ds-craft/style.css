@@ -80,7 +80,7 @@ a:hover
 #downloads
 {
     border: 4px solid white;
-    background: url('dirt64dark.png');
+    background-image: url('dirt64dark.png');
     padding: 10px;
     overflow-y: scroll;
     margin-bottom: 16px;
