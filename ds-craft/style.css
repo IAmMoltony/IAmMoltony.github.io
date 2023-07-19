@@ -85,6 +85,7 @@ a:hover
     overflow-y: scroll;
     margin-bottom: 16px;
     max-height: 360px;
+    background-attachment: local;
 }
 
 .downloads-separator
