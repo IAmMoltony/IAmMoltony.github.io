@@ -13,6 +13,7 @@ fetch('https://api.github.com/repos/IAmMoltony/ds-craft/releases', {
         const latestText = index == 0 ? '(<span style="color: lime">latest</span>)' : '';
         downloadsHtml += `${release.name} ${latestText} - <a href="${release.assets[0].browser_download_url}">Download</a> | <a href="${release.zipball_url}">Source Code (.zip)</a> | <a href="${release.html_url}">View on GitHub</a><hr class="downloads-separator">`;
     });
+    downloadsHtml += '<p style="text-align: center;">You can find older versions on <a href="https://github.com/IAmMoltony/ds-craft/releases">GitHub</a>.</p>';
     downloadsDiv.innerHTML = downloadsHtml;
 })
 .catch(err => {
