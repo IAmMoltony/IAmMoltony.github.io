@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Moltony&#39;s blog</title>
-    <link>https://iammoltony.github.io/blog/</link>
+    <link>https://iammoltony.github.io/blog/public/</link>
     <description>Recent content on Moltony&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 21 Oct 2023 03:20:08 +0600</lastBuildDate>
     
-	<atom:link href="https://iammoltony.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://iammoltony.github.io/blog/public/index.xml" rel="self" type="application/rss+xml" />
     
     
     
     <item>
       <title>Hello, world!</title>
-      <link>https://iammoltony.github.io/blog/posts/hello-world/</link>
+      <link>https://iammoltony.github.io/blog/public/posts/hello-world/</link>
       <pubDate>Sat, 21 Oct 2023 03:20:08 +0600</pubDate>
       
-      <guid>https://iammoltony.github.io/blog/posts/hello-world/</guid>
+      <guid>https://iammoltony.github.io/blog/public/posts/hello-world/</guid>
       <description>&lt;p&gt;This is my first ever blog page. I am so excited!!!!!!!&lt;/p&gt;
 &lt;p&gt;On this blog, I will post things I find quite interesting, so stay tuned! ;)&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;- moltony&lt;/em&gt;&lt;/p&gt;
