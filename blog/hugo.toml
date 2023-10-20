@@ -1,0 +1,4 @@
+baseURL = 'https://iammoltony.github.io/blog/'
+languageCode = 'en-us'
+title = "Moltony's blog"
+theme = 'etch'
