@@ -1,4 +1,4 @@
-baseURL = 'https://iammoltony.github.io/blog/'
+baseURL = 'https://iammoltony.github.io/blog/public/'
 languageCode = 'en-us'
 title = "Moltony's blog"
 theme = 'etch'
