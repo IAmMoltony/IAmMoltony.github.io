@@ -12,6 +12,25 @@
     
     
     <item>
+      <title>libNDS&#39;s PCX loader is weird</title>
+      <link>https://iammoltony.github.io/blog/public/posts/libnds-pcx/</link>
+      <pubDate>Sat, 21 Oct 2023 22:16:39 +0600</pubDate>
+      
+      <guid>https://iammoltony.github.io/blog/public/posts/libnds-pcx/</guid>
+      <description>&lt;p&gt;Last time I talked about how GIMP makes incorrect PCX files.&lt;/p&gt;
+&lt;p&gt;Guess what? Turns out I was &lt;em&gt;&lt;strong&gt;WRONG&lt;/strong&gt;&lt;/em&gt;!&lt;/p&gt;
+&lt;p&gt;Let me explain.&lt;/p&gt;
+&lt;p&gt;So, all the PCX files that come with libNDS are 8bpp - they can have up to 256 unique colors. But when you tell GIMP to create an indexed image with maximum color count of 256 and you have less than or equal to 16 colors in the image, it will get crushed to 2bpp or 4bpp. libNDS doesn&amp;rsquo;t recognize 2 and 4bpp images for some reason, so it just gives up&amp;hellip;and I still don&amp;rsquo;t know why that is.&lt;/p&gt;
+&lt;p&gt;However, libNDS docs &lt;strong&gt;did not&lt;/strong&gt; specify that only 8bpp images are supported, so it wasn&amp;rsquo;t very unexpected that I assumed that GIMP is the problem. Oh well.&lt;/p&gt;
+&lt;p&gt;To get around this arbitrary limitation, I use IfranView to increase the color depth to 8bpp. It&amp;rsquo;s really easy to do - one just needs to open their image, click on &amp;lsquo;Image&amp;rsquo; and then on &amp;lsquo;Increase Color Depth&amp;rsquo;, select 8bpp and save the new image.&lt;/p&gt;
+&lt;p&gt;And if you have to update many images to 8bpp, then it can take a really long time. A reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeally long time. A r{&amp;rsquo;e&amp;rsquo; * math.inf}ally long time.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;- moltony&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
       <title>GIMP and PCX: a disappointing discovery</title>
       <link>https://iammoltony.github.io/blog/public/posts/gimp-and-pcx/</link>
       <pubDate>Sat, 21 Oct 2023 14:10:10 +0600</pubDate>
