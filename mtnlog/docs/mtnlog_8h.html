@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">MtnLog<span id="projectnumber">&#160;2.2</span>
+   <div id="projectname">MtnLog<span id="projectnumber">&#160;2.3</span>
    </div>
    <div id="projectbrief">Moltony&#39;s Logging Library</div>
   </td>
@@ -82,6 +82,9 @@ Macros</h2></td></tr>
 <tr class="memitem:a58aa7b023caa3a52cfb93a33e048a304" id="r_a58aa7b023caa3a52cfb93a33e048a304"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58aa7b023caa3a52cfb93a33e048a304">mtnlogMessageC</a>(level, ...)&#160;&#160;&#160;<a class="el" href="#a2630e29162297bdac65524bccb38474b">mtnlogMessageCInternal</a>(__LINE__, __FILE__, __func__, level, __VA_ARGS__)</td></tr>
 <tr class="memdesc:a58aa7b023caa3a52cfb93a33e048a304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log message with context.  <br /></td></tr>
 <tr class="separator:a58aa7b023caa3a52cfb93a33e048a304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89a1a167ec9f4e04d7970012d1efbb17" id="r_a89a1a167ec9f4e04d7970012d1efbb17"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89a1a167ec9f4e04d7970012d1efbb17">mtnlogMessageTagC</a>(level,  tag, ...)&#160;&#160;&#160;<a class="el" href="#a966b3bdc1ac98bdb456328a2b835ceaf">mtnlogMessageTagCInternal</a>(__LINE__, __FILE__, __func__, level, tag, __VA_ARGS__)</td></tr>
+<tr class="memdesc:a89a1a167ec9f4e04d7970012d1efbb17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log message with tag and context.  <br /></td></tr>
+<tr class="separator:a89a1a167ec9f4e04d7970012d1efbb17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -124,9 +127,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a792a279d157d73c3d7ae2eb0d9dfa37a" id="r_a792a279d157d73c3d7ae2eb0d9dfa37a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a792a279d157d73c3d7ae2eb0d9dfa37a">mtnlogMessageTag</a> (const <a class="el" href="#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a> level, const char *tag, const char *format,...)</td></tr>
 <tr class="memdesc:a792a279d157d73c3d7ae2eb0d9dfa37a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a message to the log with a tag.  <br /></td></tr>
 <tr class="separator:a792a279d157d73c3d7ae2eb0d9dfa37a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3ecea232d5927e4c2107f0d72899663" id="r_aa3ecea232d5927e4c2107f0d72899663"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3ecea232d5927e4c2107f0d72899663">mtnlogVMessageTag</a> (const <a class="el" href="#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a> level, const char *tag, const char *format, va_list l)</td></tr>
+<tr class="memdesc:aa3ecea232d5927e4c2107f0d72899663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a message to the log with a tag (VA list version)  <br /></td></tr>
+<tr class="separator:aa3ecea232d5927e4c2107f0d72899663"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2630e29162297bdac65524bccb38474b" id="r_a2630e29162297bdac65524bccb38474b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2630e29162297bdac65524bccb38474b">mtnlogMessageCInternal</a> (const int line, const char *file, const char *function, const <a class="el" href="#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a> level, const char *message,...)</td></tr>
 <tr class="memdesc:a2630e29162297bdac65524bccb38474b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal function for mtnlogMessageC.  <br /></td></tr>
 <tr class="separator:a2630e29162297bdac65524bccb38474b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a966b3bdc1ac98bdb456328a2b835ceaf" id="r_a966b3bdc1ac98bdb456328a2b835ceaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a966b3bdc1ac98bdb456328a2b835ceaf">mtnlogMessageTagCInternal</a> (const int line, const char *file, const char *function, const <a class="el" href="#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a> level, const char *tag, const char *message,...)</td></tr>
+<tr class="memdesc:a966b3bdc1ac98bdb456328a2b835ceaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal function for mtnlogMessageTagC.  <br /></td></tr>
+<tr class="separator:a966b3bdc1ac98bdb456328a2b835ceaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Moltony's logging library. </p>
@@ -155,6 +164,42 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">level</td><td>level of the message </td></tr>
+    <tr><td class="paramname">...</td><td>variadic arguments including the format string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a89a1a167ec9f4e04d7970012d1efbb17" name="a89a1a167ec9f4e04d7970012d1efbb17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89a1a167ec9f4e04d7970012d1efbb17">&#9670;&#160;</a></span>mtnlogMessageTagC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define mtnlogMessageTagC</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">level, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">tag, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)&#160;&#160;&#160;<a class="el" href="#a966b3bdc1ac98bdb456328a2b835ceaf">mtnlogMessageTagCInternal</a>(__LINE__, __FILE__, __func__, level, tag, __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Log message with tag and context. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>level of the message </td></tr>
+    <tr><td class="paramname">tag</td><td>message tag </td></tr>
     <tr><td class="paramname">...</td><td>variadic arguments including the format string </td></tr>
   </table>
   </dd>
@@ -439,6 +484,56 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a966b3bdc1ac98bdb456328a2b835ceaf" name="a966b3bdc1ac98bdb456328a2b835ceaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a966b3bdc1ac98bdb456328a2b835ceaf">&#9670;&#160;</a></span>mtnlogMessageTagCInternal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mtnlogMessageTagCInternal </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>line</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>file</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>function</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a></td>          <td class="paramname"><span class="paramname"><em>level</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>tag</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>message</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Internal function for mtnlogMessageTagC. </p>
+<dl class="section note"><dt>Note</dt><dd>Please use mtnlogMessageTagC instead of putting the context yourself. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a89a1a167ec9f4e04d7970012d1efbb17" title="Log message with tag and context.">mtnlogMessageTagC</a> </dd></dl>
+
+</div>
+</div>
 <a id="aee8f2cb1f38b72f9fd22f9ed49353a78" name="aee8f2cb1f38b72f9fd22f9ed49353a78"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee8f2cb1f38b72f9fd22f9ed49353a78">&#9670;&#160;</a></span>mtnlogSetLevel()</h2>
 
@@ -523,6 +618,49 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a6f82e4dc814f73a22638daf81c3b21ed" title="Print a message to the log.">mtnlogMessage</a> </dd></dl>
+
+</div>
+</div>
+<a id="aa3ecea232d5927e4c2107f0d72899663" name="aa3ecea232d5927e4c2107f0d72899663"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3ecea232d5927e4c2107f0d72899663">&#9670;&#160;</a></span>mtnlogVMessageTag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mtnlogVMessageTag </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a></td>          <td class="paramname"><span class="paramname"><em>level</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>tag</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>format</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">va_list</td>          <td class="paramname"><span class="paramname"><em>l</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print a message to the log with a tag (VA list version) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>level of the message </td></tr>
+    <tr><td class="paramname">tag</td><td>message tag </td></tr>
+    <tr><td class="paramname">format</td><td>formatting string </td></tr>
+    <tr><td class="paramname">l</td><td>VA list to be used </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a792a279d157d73c3d7ae2eb0d9dfa37a" title="Print a message to the log with a tag.">mtnlogMessageTag</a> </dd></dl>
 
 </div>
 </div>
