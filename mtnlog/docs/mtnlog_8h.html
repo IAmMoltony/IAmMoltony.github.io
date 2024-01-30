@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">MtnLog<span id="projectnumber">&#160;2.3.1</span>
+   <div id="projectname">MtnLog<span id="projectnumber">&#160;2.5.2</span>
    </div>
    <div id="projectbrief">Moltony&#39;s Logging Library</div>
   </td>
@@ -64,6 +64,7 @@ $(function(){initNavTree('mtnlog_8h.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">mtnlog.h File Reference</div></div>
@@ -79,12 +80,18 @@ $(function(){initNavTree('mtnlog_8h.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a58aa7b023caa3a52cfb93a33e048a304" id="r_a58aa7b023caa3a52cfb93a33e048a304"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58aa7b023caa3a52cfb93a33e048a304">mtnlogMessageC</a>(level, ...)&#160;&#160;&#160;<a class="el" href="#a2630e29162297bdac65524bccb38474b">mtnlogMessageCInternal</a>(__LINE__, __FILE__, __func__, level, __VA_ARGS__)</td></tr>
+<tr class="memitem:a58aa7b023caa3a52cfb93a33e048a304" id="r_a58aa7b023caa3a52cfb93a33e048a304"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58aa7b023caa3a52cfb93a33e048a304">mtnlogMessageC</a>(level, ...)&#160;&#160;&#160;<a class="el" href="#a2630e29162297bdac65524bccb38474b">mtnlogMessageCInternal</a>(__LINE__, __FILE__, __func__, (level), __VA_ARGS__)</td></tr>
 <tr class="memdesc:a58aa7b023caa3a52cfb93a33e048a304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log message with context.  <br /></td></tr>
 <tr class="separator:a58aa7b023caa3a52cfb93a33e048a304"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89a1a167ec9f4e04d7970012d1efbb17" id="r_a89a1a167ec9f4e04d7970012d1efbb17"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89a1a167ec9f4e04d7970012d1efbb17">mtnlogMessageTagC</a>(level,  tag, ...)&#160;&#160;&#160;<a class="el" href="#a966b3bdc1ac98bdb456328a2b835ceaf">mtnlogMessageTagCInternal</a>(__LINE__, __FILE__, __func__, level, tag, __VA_ARGS__)</td></tr>
+<tr class="memitem:a89a1a167ec9f4e04d7970012d1efbb17" id="r_a89a1a167ec9f4e04d7970012d1efbb17"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89a1a167ec9f4e04d7970012d1efbb17">mtnlogMessageTagC</a>(level,  tag, ...)&#160;&#160;&#160;<a class="el" href="#a966b3bdc1ac98bdb456328a2b835ceaf">mtnlogMessageTagCInternal</a>(__LINE__, __FILE__, __func__, (level), (tag), __VA_ARGS__)</td></tr>
 <tr class="memdesc:a89a1a167ec9f4e04d7970012d1efbb17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log message with tag and context.  <br /></td></tr>
 <tr class="separator:a89a1a167ec9f4e04d7970012d1efbb17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a384d7f815022797906c46ec560fe8c73" id="r_a384d7f815022797906c46ec560fe8c73"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a384d7f815022797906c46ec560fe8c73">MtnLogCallback</a>) (<a class="el" href="#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a>, const char *, const char *)</td></tr>
+<tr class="memdesc:a384d7f815022797906c46ec560fe8c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log callback function.  <br /></td></tr>
+<tr class="separator:a384d7f815022797906c46ec560fe8c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -115,9 +122,15 @@ Functions</h2></td></tr>
 <tr class="memitem:aee8f2cb1f38b72f9fd22f9ed49353a78" id="r_aee8f2cb1f38b72f9fd22f9ed49353a78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee8f2cb1f38b72f9fd22f9ed49353a78">mtnlogSetLevel</a> (const <a class="el" href="#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a> level)</td></tr>
 <tr class="memdesc:aee8f2cb1f38b72f9fd22f9ed49353a78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set logging level.  <br /></td></tr>
 <tr class="separator:aee8f2cb1f38b72f9fd22f9ed49353a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0ac08244e52826e41dbedf8c1742db9" id="r_aa0ac08244e52826e41dbedf8c1742db9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0ac08244e52826e41dbedf8c1742db9">mtnlogSetCallback</a> (const <a class="el" href="#a384d7f815022797906c46ec560fe8c73">MtnLogCallback</a> cb)</td></tr>
+<tr class="memdesc:aa0ac08244e52826e41dbedf8c1742db9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set log callback.  <br /></td></tr>
+<tr class="separator:aa0ac08244e52826e41dbedf8c1742db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4260c51f83ab81c73bbb34907e3ba231" id="r_a4260c51f83ab81c73bbb34907e3ba231"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4260c51f83ab81c73bbb34907e3ba231">mtnlogTimestamps</a> (const bool enable)</td></tr>
 <tr class="memdesc:a4260c51f83ab81c73bbb34907e3ba231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable log timestamps.  <br /></td></tr>
 <tr class="separator:a4260c51f83ab81c73bbb34907e3ba231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1ecc464995b740c5b5540eff3c81c6d" id="r_ab1ecc464995b740c5b5540eff3c81c6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1ecc464995b740c5b5540eff3c81c6d">mtnlogConsoleTimestamps</a> (const bool enable)</td></tr>
+<tr class="memdesc:ab1ecc464995b740c5b5540eff3c81c6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable putting timestamps in console.  <br /></td></tr>
+<tr class="separator:ab1ecc464995b740c5b5540eff3c81c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f82e4dc814f73a22638daf81c3b21ed" id="r_a6f82e4dc814f73a22638daf81c3b21ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f82e4dc814f73a22638daf81c3b21ed">mtnlogMessage</a> (const <a class="el" href="#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a> level, const char *format,...)</td></tr>
 <tr class="memdesc:a6f82e4dc814f73a22638daf81c3b21ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a message to the log.  <br /></td></tr>
 <tr class="separator:a6f82e4dc814f73a22638daf81c3b21ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,7 +168,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)&#160;&#160;&#160;<a class="el" href="#a2630e29162297bdac65524bccb38474b">mtnlogMessageCInternal</a>(__LINE__, __FILE__, __func__, level, __VA_ARGS__)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)&#160;&#160;&#160;<a class="el" href="#a2630e29162297bdac65524bccb38474b">mtnlogMessageCInternal</a>(__LINE__, __FILE__, __func__, (level), __VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -190,7 +203,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)&#160;&#160;&#160;<a class="el" href="#a966b3bdc1ac98bdb456328a2b835ceaf">mtnlogMessageTagCInternal</a>(__LINE__, __FILE__, __func__, level, tag, __VA_ARGS__)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)&#160;&#160;&#160;<a class="el" href="#a966b3bdc1ac98bdb456328a2b835ceaf">mtnlogMessageTagCInternal</a>(__LINE__, __FILE__, __func__, (level), (tag), __VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -204,6 +217,26 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a384d7f815022797906c46ec560fe8c73" name="a384d7f815022797906c46ec560fe8c73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a384d7f815022797906c46ec560fe8c73">&#9670;&#160;</a></span>MtnLogCallback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* MtnLogCallback) (<a class="el" href="#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a>, const char *, const char *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Log callback function. </p>
+<p>Param 1: Log level</p>
+<p>Param 2: Timestamp</p>
+<p>Param 3: Message </p>
 
 </div>
 </div>
@@ -299,6 +332,31 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">enable</td><td>enable or disable console output </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab1ecc464995b740c5b5540eff3c81c6d" name="ab1ecc464995b740c5b5540eff3c81c6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1ecc464995b740c5b5540eff3c81c6d">&#9670;&#160;</a></span>mtnlogConsoleTimestamps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mtnlogConsoleTimestamps </td>
+          <td>(</td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>enable</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable or disable putting timestamps in console. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>enable or disable </td></tr>
   </table>
   </dd>
 </dl>
@@ -531,6 +589,31 @@ Functions</h2></td></tr>
 <p>Internal function for mtnlogMessageTagC. </p>
 <dl class="section note"><dt>Note</dt><dd>Please use mtnlogMessageTagC instead of putting the context yourself. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a89a1a167ec9f4e04d7970012d1efbb17" title="Log message with tag and context.">mtnlogMessageTagC</a> </dd></dl>
+
+</div>
+</div>
+<a id="aa0ac08244e52826e41dbedf8c1742db9" name="aa0ac08244e52826e41dbedf8c1742db9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0ac08244e52826e41dbedf8c1742db9">&#9670;&#160;</a></span>mtnlogSetCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mtnlogSetCallback </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a384d7f815022797906c46ec560fe8c73">MtnLogCallback</a></td>          <td class="paramname"><span class="paramname"><em>cb</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set log callback. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>callback </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
