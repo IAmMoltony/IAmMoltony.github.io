@@ -112,10 +112,16 @@
             <button onclick="Do_Fun_Fact( );"><img src="./qustion_Box.jpg"></button>
 
             <script>
-
+var Times__cliekc = 0;
 
                 function Do_Fun_Fact( )
                 {
+                    Times__cliekc = Times__cliekc + 1;
+                    if (Times__cliekc >= 5)
+                        {
+                    alert("YOu broke the button! Reload the page to fix it.")
+                            ; return ;
+                        }
                 var FACTS = [
                     "i love gd cologne",
                     "This is the worst web site I ever made, and Im proud of it",
