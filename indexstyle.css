@@ -1,0 +1,108 @@
+body
+{
+    background-color: magenta;
+}
+
+#the-header-at-the-very-top
+{
+                                                 text-align:
+                                                                     center
+
+
+
+
+
+            ;
+            TeXt-DeCoRaTiOn: UNDERlinE     ;
+            BackGrouNd:                    red;
+}
+
+/**
+ This is Added here becaude the blink tag doesnt work in my wbe BRowser
+ WHY Doesnt it work????????????
+  It       's the best tag Ever   !.
+ */
+blink {
+
+-webkit-animation: blink 1s step-end infinite;
+    -moz-animation: blink 1s step-end infinite;
+    -o-animation: blink 1s step-end infinite;
+    animation: blink 1s step-end infinite;
+}
+
+
+@-webkit-keyframes blink { 67% { opacity: 0 }}
+@-moz-keyframes blink {  67% { opacity: 0 }}
+@-o-keyframes blink {  67% { opacity: 0 }}
+@keyframes blink {  67% { opacity: 0 }}
+
+/**  apply MY FAV font !! :D */
+/*
+ * If da user have no comic sans than they have a different awsome font applied *?/
+ * */
+*{ font-family: "Comic Sans MS", "Comic Sans", cursive;
+
+}
+#footerText {FONT-Family:Sans-Serif;FONT-SIZE:12px;}
+
+.SHOCKING_TEXT_OMG {
+
+
+
+
+            /** This ofn for text for THAT IS EXTRA SHOCKING!!!! even blink<> tag is NOT enoguh!
+            * /*/
+
+
+
+
+            FONT-SIZE: XXX-LARGE;
+            Color: Yellow;
+            BACKGROUND: LIME;
+}
+
+/** i ohnestly doint know why you cant speciy multiple text decoration for a elemtent in css so uhhhhhhhh*/
+.SHOCKING_TEXT_p1
+
+    {
+text-decoration :underLine;
+}
+
+.SHOCKING_TEXT_p2 { TExt-DEcoRAtiON:bold;}
+.SHOCKING_TEXT_p3    { TExt-decoration: overline dashed red;}
+
+.SHOCKING_TEXT_p4 {
+    text-decoration: italic ;}
+
+
+
+
+
+
+    .MonoSpaceTextThingy {  font-family: MonoSpace;}
+
+
+    #Socials { 
+    
+    background-Color: RED ;}
+
+
+#welcome-to-my-website
+
+{
+BackGround-COLOR: khaki;
+}
+
+.JAVASCRIPT_SUCKS /* IT REALLY DOSE */ { color   : YELLOW ; }
+
+a:hover {
+    font-size: 8em;
+}
+
+
+fieldset legend {
+    color: ORANGe;
+    box-shadow: black 5px 5px 5px;
+    background-color: BlACK;
+    
+}
