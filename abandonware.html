@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="abandonwarestyle.css">
+    <title>Moltony's Abandoned Projects</title>
+</head>
+<body>
+    <a href="../index.html">&lt; go back to the horriblel index page</a>
+    <h1>Moltony's Abandoned Projects</h1>
+    <p>Overtime I have written many, many, many programs and scripts. Many of them I abandon eventually. Here's a list of some
+    of the projects I have abandoned.</p>
+
+    <h2>Abandoned Project One: Dodge Them All</h2>
+    <p>Dodge Them All was the first time I used <i>Java</i> for game development. It's a simple 2D game where you dodge colored
+    squares. It's kind of like Touhou but without attacks or bomb and it's theoretically infinite. I made it when I was like 10.</p>
+    <p>The game was published on GameJolt <a href="https://gamejolt.com/games/dodgethemall/613793">here</a>. It even has a
+    description:</p>
+    <i><q>Dodge Them All is a small but intense game, where you have to dodge enemies and collect coins.<br>
+    Introducing:
+
+    <ul>
+        <li>Very basic enemy that everyone can dodge</li>
+        <li>Little bit faster enemy that 95% of people can dodge</li>
+        <li>Enemy with AI that is chasing you</li>
+        <li>Impossible boss (in my opinion) and his bullets</li>
+        <li>And C R A Z Y enemy that flashes and it is fast</li>
+    </ul>
+
+    And we can't forget to mention the retro-styled sounds and art, that was made in paint. The art includes skins (pokerface, my GD icon, spiral and recursion) and enemies (the nerdy red one, :P one, doesn't know what is going on one and 3 variations of k r e j z i one).<br>
+
+    Update 1.2: fixed bugs, added new splashes<br>
+
+    And that is all! I think you will like this game. If you found bugs or something like that, let me know. #action #adventure #retro #arcade #other</q></i></p>
+    <p>What a great description.</p>
+    <p>So, how is the game actually like? Does it live up to the description? Let's take a look</p>
+    <h2>How the Gameplay is Like</h2>
+    <p>Opening up the game, we see the title screen:</p>
+    <img src="./img_abandonware/dta-ts.png" alt="DodgeThemAll title screen, featuring the game name on top, bouncing squares in the background, and
+    yellow text, called the splash, reading 'variable splash might have already been assigned'. On the bottom half of the screen, three buttons
+    are visible: 'Play', 'Help' and 'Exit'.">
+    <p>This is.. a title screen alright. Also it runs at like 5fps, which is not that surprising considering my system is really
+    slow and the title screen background has bouncing blocks bouncing all over the place.</p>
+    <p>Now let's finally look at the gameplay! Pressing play we are greeted to the following.</p>
+    <img src="./img_abandonware/dta-firstplay.png" alt="The screen you see when clicking on 'Play' at the title screen. Text below
+    describes the image quite well.">
+    <p>First off, the game runs really poorly. But that is probably not the fault of the game having bad optimization, this is
+    just my laptop (which is the same laptop I used to write this game) goofing off. Performance issues aside, let's look at the
+    game. We can see:</p>
+    <ul>
+        <li>A white square. You play as him/them/her.</li>
+        <li>A coin. When a coin is collected, you're given 110 score, I think.</li>
+        <li>The HUD. It displays the player's health, score, current level, how many coins have been collected, how much score you need to level up,
+            some instructions telling us to press space to open the shop and a FPS counter.</li>
+    </ul>
+    <p>Each time you level up, an enemy spawns. Also, I encountered a bug where after going to the next level my character started
+    constantly going down for no reason. Bugs are something this game has a lot of. I did do some playtesting but ultimately
+    I had no idea what I was doing and couldn't really solve many issues. For example, there's a bug that causes coins not to produce
+    sounds after collecting them (accompanied by an exception).</p>
+    <p>The player has 100 health initially. When you run out of health, the game is over. The game over screen looks like this.</p>
+    <img src="./img_abandonware/dta-over.png" alt="Dodge Them All's game over screen. It features the words 'Game over!' on the top
+    of the screen. Below that, the level that the player was on when the game over happened is displayed. On the bottom of the screen
+    a button for trying again is visible. The button text goes out of bounds of the button box.">
+    <p>Yup that's the game over screen. Looks basic, just like everything else in this game. I mean, the description did state that
+    its art was made in paint, so at least it's not lying.</p>
+    <p>The game also has a boss, which is just a big red square shooting bullets, but I can't bother myself to actually play the
+    game enough to get to it. Maybe you'll reach it, it's not that hard.</p>
+    <p>The game also features a shop where you can buy upgrades. You can upgrade your speed (I don't know why you would do that in a
+    bullet-hell game), upgrade max health and refill health, all for coins you collect.</p>
+    <h2>Sound Design</h2>
+    <p>There's one last thing I want to talk about before ending this section, and that is the game's <i>sounds</i>.</p>
+    <h3>Music</h3>
+    <p>The game's soundtrack is super basic and quite mid. It was made in a program called Bosca Ceoil, which is a simple tool
+    for making music. There's nothing very special about it and it's like ten seconds long.</p>
+    <h3>Sound Effects</h3>
+    <p>The sound effects are all "retro-styled" as the description puts it. They're all quite basic and not really worth talking about
+    in depth.</p>
+    <h2>Conclusion</h2>
+    <p>Dodge Them All truly shows how much I have come in game development and programming in general in a relatively short amount of
+    time (~3 years). And even if this game isn't that special or that good, it still holds a special place in my heart.</p>
+    <h1>Abandoned Project Two: Dodge Them All Rewrite</h1>
+    <p>About a year after the release of DTA, I remade the entire game in Electron using JavaScript. Unlike the original,
+    the rewrite is actually open source and can be found <a href="https://github.com/lispy2010/dodgethemall">here</a>, on GitHub. However,
+    running it isn't as easy as just downloading and running an executable - you'll have to install Node.JS and Electron. I might want
+    to publish precompiled builds.</p>
+    <p>I don't really consider this one "unfinished" per se, since I see the game as very complete, but still decided to include it here
+    just for no reason.</p>
+    <p>When I tried to compile the game, I encountered several compilation issues. Luckily, all the compiled files were included in the
+    source code, which is generally not what you're supposed to do but I didn't really know how to keep a GitHub repository back then
+    so I'll let this one slide.</p>
+    <h2>The Gameplay</h2>
+    <p>Unlike the last game, this one runs really well. Maybe the original is badly optimized... Eh, either way, here's the title screen:</p>
+    <img src="./img_abandonware/dta-rw-title.png" alt="DTARW title screen.">
+    <p>Do you see it? <b><i>A STYLIZED FONT!!</i></b> Yep, instead of using a default font, this time we have a good font. That is very
+    nice indeed. As per usual, the game's name, three buttons. Except this time, instead of an exit button we have a sandbox button. The sandbox
+    is a feature that was supposed to be included in the original game, but in a tragic series of events I lost the original source code and
+    couldn't write the feature anymore. Oh well. Instead of a yellow splash screen, we instead have a "Beta version!" label below the title
+    text. This actually is a beta version, because I wanted to implement a couple features but I'm lazy ahh hell and I just forgot. Splash text
+    is still in the game, but in a different form - now the game modifies the title of the window instead of adding text on the title screen.
+    There are a total of a lot of splashes, half of which are making keyboard puns and jokes about this game being a rage game.</p>
+    <p>Enough rambling let's get into the action!!!!!!</p>
+    <img src="./img_abandonware/dta-rw-firstplay.png" alt="DTARW gameplay">
+    <p>First impressions: way better than DTA. The background has little gray particles that kinda look like stars, the HUD is way better and the
+    performance is ten billion percent better. You can even pause it by pressing Esc! The original game also technically had pause functionality
+    when you go into the shop but having a dedicated pause screen is way nicer.</p>
+    <p>And what do you see? An enemy! The game prepares you to dodge enemies right from the beginning instead of giving you a random coin and expecting
+    you to collect it. The scoring system was also changed quite a bit. Instead of score incrementing every time you pick up a coin (which can be super
+    difficult when reaching higher levels with more enemies), score instead goes up automatically each frame. The shop is still here, and
+    worse than ever. The only item in the shop is a health boost - +10HP for 7 coins. Inflation really hit DTA...</p>
+    <h3>New Enemies</h3>
+    <p>The rewrite still includes all of the same enemies that the original Java edition has, but more. Here's the full list of new guys
+    that joined the family:</p>
+    <ul>
+        <li>The rainbow guy. He bounces like a ball and changes color like a rainbow. This is my first original enemy idea for this game,
+            and it's quite cool imo.</li>
+        <li>The brown guy. This is like the red guy who bounces, but like really really slow.</li>
+        <li>The walking guy. He just walks...menacingly. He does not care about the player whatsoever.</li>
+        <li>The snake guy. He moves in a sine wave, like a snake!</li>
+    </ul>
+    <p>There's also the boss, but I'm not sure if he's actually functional. It's definitely a bug, since code that spawns the boss is
+    included and I remember it working. idk...</p>
+    <p>One of the defining features of this remake is the <i>sandbox</i>. This is a place where you can make your custom enemy!</p>
+    <img src="./img_abandonware/dta-rw-sandbox.png" alt="DTARW sandbox screen. The player's custom enemy is contained in a box on the left.">
+    <p>I'm quite proud of this interface. So clean, so nice... Desngning this was an absolute nightmare because of the sheer amount of UI elements
+    in the sandbox. On the left, we have our custom enemy. He's in a box and can never escape. On the right, we can change the enemy however
+    we want. First, we have the speed controls - changing the X and Y velocity. Below that is the enemy color chooser - red, green, blue,
+    white, cyan, magenta, yellow and dark versions of all of them. there are two special buttons. The "?" button decides a color at random,
+    and the "!" button brings up a box where you can set a color yourself based on RGB values. On the very bottom there is an enemy reset
+    button which resets the enemy back to the same as a red one. Yeah, the sandbox is a bit underwhelming, but it is what it is.</p>
+    <h3>Sound Design</h3>
+    <p>The game does a bit better in terms of sound design. They're still "retro-styled" and there is nothing to say about them. They're
+    alright. There's no background music to accompany you, though... I think that's better, actually. The ten-second track from the original
+    can definitely make someone go nuts if they play for an extended period of time. Not that anyone would do that, however.</p>
+    <h3>Conclusion</h3>
+    <p>The Dodge Them All Rewrite is just a better, shinier, faster version of Dodge Them All. I don't know what to say, really. It's great
+    you should play it if you really want to idk do whatever tf you want i dont care</p>
+    <h1>Abandoned Project Three: JSHS</h1>
+    <p>JSHS is a simple home server software written in JavaScript. I made it when trying to make a home server. But then I found out about
+    CasaOS, which is a lot better, better, better, and also prettier. JSHS features a simple file manager, very primitive security in the form
+    of a single password, and that's basically it. I abandoned it once I found about about Casa.</p>
+    <h1>Abandoned Project Four: Pikurosu</h1>
+    <p>Pikurosu is a Nonogram/Picross game for PC. It was superceded by nonoSharp, which is active and isn't pure spaghetti code. I stopped
+    working on this when I found out that C isn't a great language for gamedev, and I was much more familiar with C#. So I switched to C# and
+    made nonoSharp.</p>
+    <img src="./img_abandonware/pikurosu-ns.png" alt="Left: pikurosu. Right: nonoSharp">
+    <p>The above is a side-by-side comparison of Pikurosu and nonoSharp.</p>
+    <h1>Abandoned Project Five: Squarity</h1>
+    <p>NO NOT DTA AGAIN!!! This was supposed to be a rewrite of DTARW in C++. I simply did not want to.</p>
+    <h1>Abandoned Project Six: Paint DS</h1>
+</body>
+</html>
