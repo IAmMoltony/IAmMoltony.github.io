@@ -12,7 +12,67 @@
     <p>Overtime I have written many, many, many programs and scripts. Many of them I abandon eventually. Here's a list of some
     of the projects I have abandoned.</p>
 
-    <h2>Abandoned Project One: Dodge Them All</h2>
+    <fieldset>
+        <legend>Table of Contents</legend>
+        <ol>
+            <li>
+                <details>
+                    <summary><a href="#ap1">Dodge Them All</a></summary>
+                    <ol>
+                        <li>
+                            <a href="#ap1_gp">How the Gameplay is Like</a>
+                        </li>
+                        <li>
+                            <details>
+                                <summary><a href="#ap1_sd">Sound Design</a></summary>
+                                <ol>
+                                    <li>
+                                        <a href="#ap1_sd_m">Music</a>
+                                    </li>
+                                    <li>
+                                        <a href="#ap1_sd_se">Sound Effects</a>
+                                    </li>
+                                </ol>
+                            </details>
+                        </li>
+                        <li>
+                            <a href="#ap1_c">Conclusion</a>
+                        </li>
+                    </ol>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="#ap2">Dodge Them All Rewrite</a></summary>
+                    <ol>
+                        <li>
+                            <a href="#ap2_tg">The Gameplay</a>
+                        </li>
+                        <li>
+                            <a href="#ap2_ne">New Enemies</a>
+                        </li>
+                        <li>
+                            <a href="#ap2_sd">Sound Design</a>
+                        </li>
+                        <li>
+                            <a href="#ap2_c">Conclusion</a>
+                        </li>
+                    </ol>
+                </details>
+            </li>
+            <li>
+                <a href="#ap3">JSHS</a>
+            </li>
+            <li>
+                <a href="#ap4">Pikurosu</a>
+            </li>
+            <li>
+                <a href="#ap5">Squarity</a>
+            </li>
+        </ol>
+    </fieldset>
+
+    <h2 id="ap1">Abandoned Project One: Dodge Them All</h2>
     <p><a href="https://github.com/IAmMoltony/DodgeSrc">Look at the decompiled source code</a></p>
     <p>Dodge Them All was the first time I used <i>Java</i> for game development. It's a simple 2D game where you dodge colored
     squares. It's kind of like Touhou but without attacks or bomb and it's theoretically infinite. I made it when I was like 10.</p>
@@ -36,7 +96,7 @@
     And that is all! I think you will like this game. If you found bugs or something like that, let me know. #action #adventure #retro #arcade #other</q></i></p>
     <p>What a great description.</p>
     <p>So, how is the game actually like? Does it live up to the description? Let's take a look.</p>
-    <h2>How the Gameplay is Like</h2>
+    <h3 id="ap1_gp">How the Gameplay is Like</h3>
     <p>Opening up the game, we see the title screen:</p>
     <img src="./img_abandonware/dta-ts.png" alt="DodgeThemAll title screen, featuring the game name on top, bouncing squares in the background, and
     yellow text, called the splash, reading 'variable splash might have already been assigned'. On the bottom half of the screen, three buttons
@@ -56,7 +116,7 @@
             some instructions telling us to press space to open the shop and a FPS counter.</li>
     </ul>
     <p>Each time you level up, an enemy spawns. Also, I encountered a bug where after going to the next level my character started
-    constantly going down for no reason. Bugs are something this game has a lot of. I did do some playtesting but ultimately
+    constantly going down for no reason. Bugs are something this game has a lot of. I did do some play testing but ultimately
     I had no idea what I was doing and couldn't really solve many issues. For example, there's a bug that causes coins not to produce
     sounds after collecting them (accompanied by an exception).</p>
     <p>The player has 100 health initially. When you run out of health, the game is over. The game over screen looks like this.</p>
@@ -71,28 +131,28 @@
     game enough to get to it. Maybe you'll reach it, it's not that hard.</p>
     <p>The game also features a shop where you can buy upgrades. You can upgrade your speed (I don't know why you would do that in a
     bullet-hell game), upgrade max health and refill health, all for coins you collect.</p>
-    <h2>Sound Design</h2>
+    <h3 id="ap1_sd">Sound Design</h3>
     <p>There's one last thing I want to talk about before ending this section, and that is the game's <i>sounds</i>.</p>
-    <h3>Music</h3>
+    <h4 id="ap1_sd_m">Music</h4>
     <p>The game's soundtrack is super basic and quite mid. It was made in a program called Bosca Ceoil, which is a simple tool
     for making music. There's nothing very special about it and it's like ten seconds long.</p>
-    <h3>Sound Effects</h3>
+    <h4 id="ap1_sd_se">Sound Effects</h4>
     <p>The sound effects are all "retro-styled" as the description puts it. They're all quite basic and not really worth talking about
     in depth.</p>
-    <h2>Conclusion</h2>
+    <h3 id="ap1_c">Conclusion</h3>
     <p>Dodge Them All truly shows how much I have come in game development and programming in general in a relatively short amount of
     time (~3 years). And even if this game isn't that special or that good, it still holds a special place in my heart.</p>
-    <h1>Abandoned Project Two: Dodge Them All Rewrite</h1>
-    <p>About a year after the release of DTA, I remade the entire game in Electron using JavaScript. Unlike the original,
+    <h2 id="ap2">Abandoned Project Two: Dodge Them All Rewrite</h2>
+    <p>About a year after the release of <abbr title="Dodge Them All">DTA</abbr>, I remade the entire game in Electron using JavaScript. Unlike the original,
     the rewrite is actually open source and can be found <a href="https://github.com/lispy2010/dodgethemall">here</a>, on GitHub. However,
     running it isn't as easy as just downloading and running an executable - you'll have to install Node.JS and Electron. I might want
-    to publish precompiled builds.</p>
+    to publish pre-compiled builds.</p>
     <p>I don't really consider this one "unfinished" per se, since I see the game as very complete, but still decided to include it here
     just for no reason.</p>
     <p>When I tried to compile the game, I encountered several compilation issues. Luckily, all the compiled files were included in the
     source code, which is generally not what you're supposed to do but I didn't really know how to keep a GitHub repository back then
     so I'll let this one slide.</p>
-    <h2>The Gameplay</h2>
+    <h3 id="ap2_tg">The Gameplay</h3>
     <p>Unlike the last game, this one runs really well. Maybe the original is badly optimized... Eh, either way, here's the title screen:</p>
     <img src="./img_abandonware/dta-rw-title.png" alt="DTARW title screen.">
     <p>Do you see it? <b><i>A STYLIZED FONT!!</i></b> Yep, instead of using a default font, this time we have a good font. That is very
@@ -105,55 +165,90 @@
     <p>Enough rambling let's get into the action!!!!!!</p>
     <img src="./img_abandonware/dta-rw-firstplay.png" alt="DTARW gameplay">
     <p>First impressions: way better than DTA. The background has little gray particles that kinda look like stars, the HUD is way better and the
-    performance is ten billion percent better. You can even pause it by pressing Esc! The original game also technically had pause functionality
+    performance is ten billion percent better. You can even pause it by pressing Escape! The original game also technically had pause functionality
     when you go into the shop but having a dedicated pause screen is way nicer.</p>
     <p>And what do you see? An enemy! The game prepares you to dodge enemies right from the beginning instead of giving you a random coin and expecting
-    you to collect it. The scoring system was also changed quite a bit. Instead of score incrementing every time you pick up a coin (which can be super
+    you to collect it. The scoring system was also changed quite a bit. Instead of score being incremented every time you pick up a coin (which can be super
     difficult when reaching higher levels with more enemies), score instead goes up automatically each frame. The shop is still here, and
     worse than ever. The only item in the shop is a health boost - +10HP for 7 coins. Inflation really hit DTA...</p>
-    <h3>New Enemies</h3>
+    <h3 id="ap2_ne">New Enemies</h3>
     <p>The rewrite still includes all of the same enemies that the original Java edition has, but more. Here's the full list of new guys
     that joined the family:</p>
     <ul>
         <li>The rainbow guy. He bounces like a ball and changes color like a rainbow. This is my first original enemy idea for this game,
-            and it's quite cool imo.</li>
+            and it's quite cool <abbr title="in my opinion">IMO</abbr>.</li>
         <li>The brown guy. This is like the red guy who bounces, but like really really slow.</li>
         <li>The walking guy. He just walks...menacingly. He does not care about the player whatsoever.</li>
         <li>The snake guy. He moves in a sine wave, like a snake!</li>
     </ul>
     <p>There's also the boss, but I'm not sure if he's actually functional. It's definitely a bug, since code that spawns the boss is
-    included and I remember it working. idk...</p>
+    included and I remember it working. <abbr title="I don't know">IDK</abbr>...</p>
     <p>One of the defining features of this remake is the <i>sandbox</i>. This is a place where you can make your custom enemy!</p>
     <img src="./img_abandonware/dta-rw-sandbox.png" alt="DTARW sandbox screen. The player's custom enemy is contained in a box on the left.">
-    <p>I'm quite proud of this interface. So clean, so nice... Desngning this was an absolute nightmare because of the sheer amount of UI elements
+    <p>I'm quite proud of this interface. So clean, so nice... Designing this was an absolute nightmare because of the sheer amount of UI elements
     in the sandbox. On the left, we have our custom enemy. He's in a box and can never escape. On the right, we can change the enemy however
     we want. First, we have the speed controls - changing the X and Y velocity. Below that is the enemy color chooser - red, green, blue,
-    white, cyan, magenta, yellow and dark versions of all of them. there are two special buttons. The "?" button decides a color at random,
+    white, cyan, magenta, yellow and dark versions of all of them. There are two special buttons. The "?" button decides a color at random,
     and the "!" button brings up a box where you can set a color yourself based on RGB values. On the very bottom there is an enemy reset
     button which resets the enemy back to the same as a red one. Yeah, the sandbox is a bit underwhelming, but it is what it is.</p>
-    <h3>Sound Design</h3>
+    <h3 id="ap2_sd">Sound Design</h3>
     <p>The game does a bit better in terms of sound design. They're still "retro-styled" and there is nothing to say about them. They're
     alright. There's no background music to accompany you, though... I think that's better, actually. The ten-second track from the original
     can definitely make someone go nuts if they play for an extended period of time. Not that anyone would do that, however.</p>
-    <h3>Conclusion</h3>
+    <h3 id="ap2_c">Conclusion</h3>
     <p>The Dodge Them All Rewrite is just a better, shinier, faster version of Dodge Them All. I don't know what to say, really. It's great
-    you should play it if you really want to idk do whatever tf you want i dont care</p>
-    <h1>Abandoned Project Three: JSHS</h1>
+    you should play it if you really want to idk do whatever tf you want i don't care</p>
+    <h2 id="ap3">Abandoned Project Three: <abbr title="JavaScript Home Server">JSHS</abbr></h2>
     <p>JSHS is a simple home server software written in JavaScript. I made it when trying to make a home server. But then I found out about
     CasaOS, which is a lot better, better, better, and also prettier. JSHS features a simple file manager, very primitive security in the form
     of a single password, and that's basically it. I abandoned it once I found about about CasaOS, which was way better and more mature.</p>
-    <h1>Abandoned Project Four: Pikurosu</h1>
+    <h2 id="ap4">Abandoned Project Four: Pikurosu</h2>
     <p>Pikurosu is a Nonogram/Picross game for PC. It was superceded by nonoSharp, which is active and isn't pure spaghetti code. I stopped
     working on this when I found out that C isn't a great language for gamedev (some might argue), and I was much more familiar with C#. So
     I switched to C# and made nonoSharp.</p>
     <img src="./img_abandonware/pikurosu-ns.png" alt="Left: pikurosu. Right: nonoSharp">
     <p>The above is a side-by-side comparison of Pikurosu and nonoSharp.</p>
-    <h1>Abandoned Project Five: Squarity</h1>
-    <p>NO NOT DTA AGAIN!!! This was supposed to be a rewrite of DTARW in C++. I simply did not want to. I'm done with this square dodge square
+    <h2 id="ap5">Abandoned Project Five: Squarity</h2>
+    <p>NO NOT DTA AGAIN!!! This was supposed to be a rewrite of <abbr title="Dodge Them All Rewrite">DTARW</abbr> in C++. I simply did not want to. I'm done with this square dodge square
     thing!</p>
     <p><small><i>a rewrite of a rewrite...</i></small></p>
     <hr>
     <p>I'll add more abandoned projects and expand upon existing entries in the future.</p>
-    <p><small>this is revision 2</small></p>
+    <p><small>this is revision 2.1</small></p>
+    <hr>
+    <small>
+        <p><b>Revision history</b></p>
+        <ul>
+            <li>
+                <i>r2.1 - March 25, 2024</i>
+                <ul>
+                    <li>Added revision history and table of contents.</li>
+                    <li>Fixed headings.</li>
+                    <li>Added abbreviation tags.</li>
+                    <li>Typo fixes.</li>
+                </ul>
+            </li>
+            <li>
+                <i>r2 - March 23, 2024</i>
+                <ul>
+                    <li><i>Dodge Them All</i>: Added link to DodgeSrc.</li>
+                    <li>General cleanup.</li>
+                </ul>
+            </li>
+            <li>
+                <i>r1.1 - March 14, 2024</i>
+                <ul>
+                    <li>Added revision number to the page.</li>
+                    <li>Removed <i>PaintDS</i> entry (it was empty).</li>
+                </ul>
+            </li>
+            <li>
+                <i>r1 - March 14, 2024</i>
+                <ul>
+                    <li>Initial revision.</li>
+                </ul>
+            </li>
+        </ul>
+    </small>
 </body>
 </html>
