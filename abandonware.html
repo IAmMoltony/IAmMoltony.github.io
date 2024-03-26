@@ -12,7 +12,7 @@
     <p>Overtime I have written many, many, many programs and scripts. Many of them I abandon eventually. Here's a list of some
     of the projects I have abandoned.</p>
 
-    <fieldset>
+    <fieldset id="toc">
         <legend>Table of Contents</legend>
         <ol>
             <li>
@@ -69,6 +69,39 @@
             <li>
                 <a href="#ap5">Squarity</a>
             </li>
+            <li>
+                <details>
+                    <summary><a href="#ap6">Number Go Up</a></summary>
+                    <ol>
+                        <li>
+                            <details>
+                                <summary><a href="#ap6_tg">The Gameplay</a></summary>
+                                <ol>
+                                    <li>
+                                        <a href="#ap6_tg_whiydstk">What Happens If You Don't Spam The Keyboard</a>
+                                    </li>
+                                </ol>
+                            </details>
+                        </li>
+                    </ol>
+                </details>
+            </li>
+            <li>
+                <a href="#ap7">lwgh</a>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="#ap8">NDSvi</a></summary>
+                    <ol>
+                        <li>
+                            <a href="#ap8_o">Overview</a>
+                        </li>
+                        <li>
+                            <a href="#ap8_svf">Supported Vi Features</a>
+                        </li>
+                    </ol>
+                </details>
+            </li>
         </ol>
     </fieldset>
 
@@ -78,7 +111,7 @@
     squares. It's kind of like Touhou but without attacks or bomb and it's theoretically infinite. I made it when I was like 10.</p>
     <p>The game was published on GameJolt <a href="https://gamejolt.com/games/dodgethemall/613793">here</a>. It even has a
     description:</p>
-    <i><q>Dodge Them All is a small but intense game, where you have to dodge enemies and collect coins.<br>
+    <i><div class="quote">Dodge Them All is a small but intense game, where you have to dodge enemies and collect coins.<br>
     Introducing:
 
     <ul>
@@ -93,25 +126,27 @@
 
     Update 1.2: fixed bugs, added new splashes<br>
 
-    And that is all! I think you will like this game. If you found bugs or something like that, let me know. #action #adventure #retro #arcade #other</q></i></p>
+    And that is all! I think you will like this game. If you found bugs or something like that, let me know. #action #adventure #retro #arcade #other</div></i></p>
     <p>What a great description.</p>
     <p>So, how is the game actually like? Does it live up to the description? Let's take a look.</p>
     <h3 id="ap1_gp">How the Gameplay is Like</h3>
     <p>Opening up the game, we see the title screen:</p>
     <img src="./img_abandonware/dta-ts.png" alt="DodgeThemAll title screen, featuring the game name on top, bouncing squares in the background, and
     yellow text, called the splash, reading 'variable splash might have already been assigned'. On the bottom half of the screen, three buttons
-    are visible: 'Play', 'Help' and 'Exit'.">
+    are visible: 'Play', 'Help' and 'Exit'." class="screenshot">
+    <p class="centered-text"><i>Dodge Them All title screen</i></p>
     <p>This is.. a title screen alright. Also it runs at like 5fps, which is not that surprising considering my system is really
     slow and the title screen background has bouncing blocks bouncing all over the place.</p>
     <p>Now let's finally look at the gameplay! Pressing play we are greeted to the following.</p>
     <img src="./img_abandonware/dta-firstplay.png" alt="The screen you see when clicking on 'Play' at the title screen. Text below
-    describes the image quite well.">
+    describes the image quite well." class="screenshot">
+    <p class="centered-text"><i>Dodge Them All gameplay</i></p>
     <p>First off, the game runs really poorly. But that is probably not the fault of the game having bad optimization, this is
     just my laptop (which is the same laptop I used to write this game) goofing off. Performance issues aside, let's look at the
     game. We can see:</p>
     <ul>
         <li>A white square. You play as him/them/her.</li>
-        <li>A coin. When a coin is collected, you're given 110 score, I think.</li>
+        <li>A coin. When a coin is collected, you're given some score. The amount of score is calculated by this formula: <b>100 + 10 * (current level - 1)</b></li>
         <li>The HUD. It displays the player's health, score, current level, how many coins have been collected, how much score you need to level up,
             some instructions telling us to press space to open the shop and a FPS counter.</li>
     </ul>
@@ -122,7 +157,8 @@
     <p>The player has 100 health initially. When you run out of health, the game is over. The game over screen looks like this.</p>
     <img src="./img_abandonware/dta-over.png" alt="Dodge Them All's game over screen. It features the words 'Game over!' on the top
     of the screen. Below that, the level that the player was on when the game over happened is displayed. On the bottom of the screen
-    a button for trying again is visible. The button text goes out of bounds of the button box.">
+    a button for trying again is visible. The button text goes out of bounds of the button box." class="screenshot">
+    <p class="centered-text"><i>Dodge Them All's game over screen</i></p>
     <p>Yup that's the game over screen. Looks basic, just like everything else in this game. I mean, the description did state that
     its art was made in paint, so at least it's not lying. By the way, did you notice that cyan square guy? That's the result of
     <i>me having absolutely no idea what the actual hell i was doing</i>, so for whatever reason not all enemies actually despawned
@@ -130,7 +166,7 @@
     <p>The game also has a boss, which is just a big red square shooting bullets, but I can't bother myself to actually play the
     game enough to get to it. Maybe you'll reach it, it's not that hard.</p>
     <p>The game also features a shop where you can buy upgrades. You can upgrade your speed (I don't know why you would do that in a
-    bullet-hell game), upgrade max health and refill health, all for coins you collect.</p>
+    bullet-hell game), upgrade max health and refill health, all for coins you collect. Every time you buy something, it gets more and more expensive.</p>
     <h3 id="ap1_sd">Sound Design</h3>
     <p>There's one last thing I want to talk about before ending this section, and that is the game's <i>sounds</i>.</p>
     <h4 id="ap1_sd_m">Music</h4>
@@ -154,7 +190,8 @@
     so I'll let this one slide.</p>
     <h3 id="ap2_tg">The Gameplay</h3>
     <p>Unlike the last game, this one runs really well. Maybe the original is badly optimized... Eh, either way, here's the title screen:</p>
-    <img src="./img_abandonware/dta-rw-title.png" alt="DTARW title screen.">
+    <img src="./img_abandonware/dta-rw-title.png" alt="DTARW title screen" class="screenshot">
+    <p class="centered-text"><i>DTARW title screen</i></p>
     <p>Do you see it? <b><i>A STYLIZED FONT!!</i></b> Yep, instead of using a default font, this time we have a good font. That is very
     nice indeed. As per usual, the game's name, three buttons. Except this time, instead of an exit button we have a sandbox button. The sandbox
     is a feature that was supposed to be included in the original game, but in a tragic series of events I lost the original source code and
@@ -163,7 +200,8 @@
     is still in the game, but in a different form - now the game modifies the title of the window instead of adding text on the title screen.
     There are a total of a lot of splashes, half of which are making keyboard puns and jokes about this game being a rage game.</p>
     <p>Enough rambling let's get into the action!!!!!!</p>
-    <img src="./img_abandonware/dta-rw-firstplay.png" alt="DTARW gameplay">
+    <img src="./img_abandonware/dta-rw-firstplay.png" alt="DTARW gameplay" class="screenshot">
+    <p class="centered-text"><i>DTARW gameplay</i></p>
     <p>First impressions: way better than DTA. The background has little gray particles that kinda look like stars, the HUD is way better and the
     performance is ten billion percent better. You can even pause it by pressing Escape! The original game also technically had pause functionality
     when you go into the shop but having a dedicated pause screen is way nicer.</p>
@@ -184,7 +222,8 @@
     <p>There's also the boss, but I'm not sure if he's actually functional. It's definitely a bug, since code that spawns the boss is
     included and I remember it working. <abbr title="I don't know">IDK</abbr>...</p>
     <p>One of the defining features of this remake is the <i>sandbox</i>. This is a place where you can make your custom enemy!</p>
-    <img src="./img_abandonware/dta-rw-sandbox.png" alt="DTARW sandbox screen. The player's custom enemy is contained in a box on the left.">
+    <img src="./img_abandonware/dta-rw-sandbox.png" alt="DTARW sandbox screen. The player's custom enemy is contained in a box on the left." class="screenshot">
+    <p class="centered-text"><i>Sandbox screen</i></p>
     <p>I'm quite proud of this interface. So clean, so nice... Designing this was an absolute nightmare because of the sheer amount of UI elements
     in the sandbox. On the left, we have our custom enemy. He's in a box and can never escape. On the right, we can change the enemy however
     we want. First, we have the speed controls - changing the X and Y velocity. Below that is the enemy color chooser - red, green, blue,
@@ -208,19 +247,76 @@
     <p>Pikurosu is a Nonogram/Picross game for PC. It was superceded by nonoSharp, which is active and isn't pure spaghetti code. I stopped
     working on this when I found out that C isn't a great language for gamedev (some might argue), and I was much more familiar with C#. So
     I switched to C# and made nonoSharp.</p>
-    <img src="./img_abandonware/pikurosu-ns.png" alt="Left: pikurosu. Right: nonoSharp">
-    <p>The above is a side-by-side comparison of Pikurosu and nonoSharp.</p>
+    <img src="./img_abandonware/pikurosu-ns.png" alt="Left: pikurosu. Right: nonoSharp" class="screenshot">
+    <p class="centered-text"><i>Comparison of pikurosu and nonoSharp</i></p>
     <h2 id="ap5">Abandoned Project Five: Squarity</h2>
     <p><a href="https://github.com/IAmMoltony/Squarity">Squarity source code</a></p>
     <p>NO NOT DTA AGAIN!!! This was supposed to be a rewrite of <abbr title="Dodge Them All Rewrite">DTARW</abbr> in C++. I simply did not want to. I'm done with this square dodge square
     thing!</p>
     <p><small><i>a rewrite of a rewrite...</i></small></p>
+    <h2 id="ap6">Abandoned Project Six: Number Go Up</h2>
+    <p><a href="https://github.com/IAmMoltony/NumberGoUp">Number Go Up source code</a></p>
+    <p>Number Go Up is a very very very simple game where you have to make the number go up</p>
+    <p>I abandoned this one because I don't use Windows anymore on my system and setting up GMS2 (which is the engine this game uses), well I'm too lazy for
+    that</p>
+    <h3 id="ap6_tg">The Gameplay</h3>
+    <p>you spam your keyboard and number go up</p>
+    <h4 id="ap6_tg_whiydstk">What Happens If You Don't Spam The Keyboard</h4>
+    <p>number goes down</p>
+    <h2 id="ap7">Abandoned Project Seven: <abbr title="Lightweight GitHub">lwgh</abbr></h2>
+    <p><a href="https://github.com/IAmMoltony/lwgh">lwgh source code</a></p>
+    <p>lwgh is a CLI tool for accessing GitHub. I made it back when I didn't like using the browser at all, but looking back... Browser is better anyway.
+    Besides, the code I wrote for this little app was very spaghetti early on.</p>
+    <h2 id="ap8">Abandoned Project Eight: NDSvi</h2>
+    <p><a href="https://github.com/IAmMoltony/NDSvi">NDSvi source code</a></p>
+    <p>NDSvi is a text editor for the Nintendo DS heavily inspired by Vi. I created it because I wanted to edit some random save file manually for
+    <a href="https://iammoltony.github.io/ds-craft/index.html">DS-Craft</a>, but couldn't find a text editor app for the DS. In the middle of making
+    this project, I discovered that it's possible to edit the <a href="https://melonds.kuribo64.net">melonDS</a> emulated SD card files by simply
+    removing the SD card image, editing the synced files in the SD card sync folder and then opening the emulator.</p>
+    <h3 id="ap8_o">Overview</h3>
+    <img src="img_abandonware/nv.png" alt="NDSvi screenshot. The editor is in insert mode. On the bottom screen is a keyboard with the usual English
+    QWERTY layout. The text on the top screen, typed by the user reads 'Hello, world' on the first line, then ':3' on the next line." class="screenshot">
+    <p class="centered-text"><i>NDSvi running in melonDS</i></p>
+    <p>This is quite familiar to any of you who use Vim (myself included). The editor is in insert mode, some text is in the buffer, and the touch
+    keyboard is there. How nice.</p>
+    <h3 id="ap8_svf">Supported Vi Features</h3>
+    <p>In the state that it's in, NDSvi supports the following features from Vi:<p>
+    <ol>
+        <li>Typing stuff in insert mode</li>
+        <li>Support for 'i', 'o', '0', '$', 'O', 'G', 'dd', 'gg', 'yy' and 'p' Vi keys</li>
+        <li>Saving files (doesn't seem to work sometimes)</li>
+        <li>Opening files</li>
+        <li>Displaying the version information</li>
+    </ol>
+    <p>Despite supporting many cool Vi features, it doesn't have scrolling, hjkl, and its architecture is overall flawed.</p>
     <hr>
-    <p><small>this is revision 2.2</small></p>
-    <hr>
+    <p><small>this is <i>revision 3</i></small></p>
     <small>
         <p><b>Revision history</b></p>
         <ul>
+            <li>
+                <i>r3 - March 26, 2024</i>
+                <ul>
+                    <li>
+                        Added the following entries:
+                        <ol>
+                            <li>Number Go Up</li>
+                            <li>lwgh (Lightweight GitHub)</li>
+                            <li>NDSvi</li>
+                        </ol>
+                    </li>
+                    <li>
+                        Minor style changes:
+                        <ol>
+                            <li>ToC: fit content so no more wasted space.</li>
+                            <li><i>Dodge Them All</i>: better description quote.</li>
+                            <li>Centered screenshots.</li>
+                        </ol>
+                    </li>
+                    <li>Added descriptions to screenshots.</li>
+                    <li><i>Dodge Them All</i>: Updated coin score formula, updated shop description.</li>
+                </ul>
+            </li>
             <li>
                 <i>r2.2 - March 26, 2024</i>
                 <ul>
