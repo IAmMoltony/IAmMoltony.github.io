@@ -2,7 +2,7 @@
 // Inserts random typos into all text on the page
 
 function TYPO_MAKER_ANNIIHIILATER_LAUNCH(node) {
-    console.log("TYPO MAKER ANNIHILATER INCOMING INTO THIS WEBSIT!!!!!!!!!!!!!!!!1");
+    console.log("TYPO MAKER ANNIHILATER INCOMING INTO THIS WEBSIT!!!!!!!!!!!!!!!!1"); // anounc that WE are TYPO MAKERING ANIHIALTERING THE WEB PAGE
     if (node.nodeType === 3) { // lok at deez nuts its a fri9ckiin TEXT NODE!!!!!!! oh meh gah im a TEXT NODE
         // or am i a text node NO im not a twext node im THE MOLTOINI the MOLTONY moltno
         //motony
@@ -25,7 +25,7 @@ function TYPO_MAKER_ANNIIHIILATER_LAUNCH(node) {
             // THIS IS VER LIKELY (2 hapn)
             // this will actually sometime overwrite <script></scrpi> tage so HAHA LOSER NO JAVA SKIRT FOR U
             // idiot
-          newText += getRandomTypo(char);
+          newText += getRandomTypo();
           console.log("MAKED TYPO ON TGEXCTG ", node);// anounc
         } else {
           newText += char; // eh ook
@@ -71,7 +71,7 @@ function TYPO_MAKER_ANNIIHIILATER_LAUNCH(node) {
   // yea
 
 
-  function getRandomTypo(char) {
+  function getRandomTypo() {
 
     // the entire alphabet of the Engliush language
     const possibleTypos = ['\b', 'a', 'b',  'c', 'd','f', 'g','h','i','j','k','l','m','n',        THELETTERO,
@@ -89,7 +89,7 @@ function TYPO_MAKER_ANNIIHIILATER_LAUNCH(node) {
     .
     body
     ;
-    TYPO_MAKER_ANNIIHIILATER_LAUNCH(Owo_Whats_This);
+    TYPO_MAKER_ANNIIHIILATER_LAUNCH(Owo_Whats_This); // jus mAke it goc WILD on the bosy!!
   });
 
 
