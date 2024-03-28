@@ -1,4 +1,4 @@
-// Typo Insertrer 30000
+// Typo Insertrer 30000 (aka TYPO MAKER ANNIHILATER)
 // Inserts random typos into all text on the page
 //
 //ANIHILATER VERSION 2
@@ -150,3 +150,7 @@ function TYPO_MAKER_ANNIIHIILATER_LAUNCH(node) {
 
   // https://gitihub.com/IAmMMONY/TYPOMAKERANNIIHILATER
   // if this becaume a thing then go ststr it o
+// Update 2024n :THIS IS NOW OFICIAL
+// go 2 the websit eand dDdDOWNload the sceit to youe website Riyht bow 2DAy
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// asewome !
