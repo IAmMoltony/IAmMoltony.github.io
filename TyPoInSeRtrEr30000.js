@@ -129,17 +129,18 @@ function TYPO_MAKER_ANNIIHIILATER_LAUNCH(node) {
     const randomIndex = Math.floor(Math.random() * possibleTypos.length); // hm what do i choose oh i will choose the leettr o
     return possibleTypos[randomIndex]; // return thne
   }
-  
-  // aku sayang kamu juga sayang
-  document.addEventListener('DOMContentLoaded', function() {
+function StartTYPO_MAKER_ANNIHILATER_30000 (){
+
     var Owo_Whats_This =                  document
     .
     body
     ;
     TYPO_MAKER_ANNIIHIILATER_LAUNCH(Owo_Whats_This); // jus mAke it goc WILD on the bosy!!
-  });
-
-
+  
+}
+  
+  // aku sayang kamu juga sayang
+  document.addEventListener('DOMContentLoaded', StartTYPO_MAKER_ANNIHILATER_30000);
 
 
   //. AND THAT
