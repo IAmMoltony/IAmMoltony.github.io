@@ -13,6 +13,10 @@
     <p>Overtime I have written many, many, many programs and scripts. Many of them I abandon eventually. Here's a list of some
     of the projects I have abandoned.</p>
 
+    <p>This page doesn't include maintenance mode projects (e.g. <a href="https://github.com/IAmMoltony/libmtnlog">MtnLog</a>)
+    and projects that don't need any more maintenance, such as <a href="https://github.com/IAmMoltony/useless-sh">useless-sh</a>.
+    </p>
+
     <fieldset id="toc">
         <legend>Table of Contents</legend>
         <ol>
@@ -102,6 +106,37 @@
                         </li>
                     </ol>
                 </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="#ap9">Paint DS</a></summary>
+                    <ol>
+                        <li>
+                            <a href="#ap9_o">Overview</a>
+                        </li>
+                        <li>
+                            <a href="#ap9_pt">Pencil Tool</a>
+                        </li>
+                        <li>
+                            <a href="#ap9_et">Eraser Tool</a>
+                        </li>
+                        <li>
+                            <a href="#ap9_ft">Fill Tool</a>
+                        </li>
+                        <li>
+                            <a href="#ap9_st">Shape Tool</a>
+                        </li>
+                        <li>
+                            <a href="#ap9_sd">Sound Design</a>
+                        </li>
+                        <li>
+                            <a href="#ap9_c">Conclusion</a>
+                        </li>
+                    </ol>
+                </details>
+            </li>
+            <li>
+                <a href="#todo">To-do list</a>
             </li>
         </ol>
     </fieldset>
@@ -311,11 +346,76 @@
         <li>Displaying the version information</li>
     </ol>
     <p>Despite supporting many cool Vi features, it doesn't have scrolling, hjkl, and its architecture is overall flawed.</p>
+
+    <h2 id="ap9">Abandoned Project Nine: Paint DS</h2>
+    <p>PaintDS is a painting program for the Nintendo DS written in C. I created it because, as is the case with NDSvi, I couldn't find a painting
+    application for the DS. I stopped developing this one because of two reasons: <i>poor architecture</i> and <i>me not being able to display text,
+    like, at all, no matter how hard i tried</i>. Let's take a look at it!</p>
+
+    <h3 id="ap9_o">Overview</h3>
+    <img src="./img_abandonware/pds.png" alt="Paint DS screenshot. Bottom screen: painting application with color selection and multiple tools. Top
+    screen: white lines on a light blue background." class="screenshot">
+    <p class="centered-text"><i>Paint DS running in melonDS</i></p>
+    <p>The top screen is the least interesting part. It's just a scrolling line pattern, intended just so that there's something on the top screen.
+    All the painting tools are on the bottom screen. On the bottom bar there are four tools: Pencil, Eraser, Fill and Shapes. On the top are the
+    tool properties. Let's take a look at each tool.</p>
+
+    <h3 id="ap9_pt">Pencil Tool</h3>
+    <p>The pencil tool is quite straightforward: touch the screen and draw whatever you like. You can even choose the color you want to draw with!
+    There's black, red, green, blue, cyan, magenta, yellow, gray, dark red, dark green, dark blue, dark cyan, dark magenta and dark yellow. If you're
+    wondering why there's no white color, that's because the eraser is used to draw in white (we'll look at the eraser in a bit). You can also choose
+    the width of the stroke: thin, medium and <b><i>T H I C C</i></b>. And that is all, no more, no less.</p>
+    <img src="./img_abandonware/pds_drawing.png" alt="A drawing made using Paint DS. It features a person and a sun." class="screenshot">
+    <p class="centered-text"><i>A (poorly drawn) picture drawn using the Pencil tool.</i></p>
+
+    <h3 id="ap9_et">Eraser Tool</h3>
+    <p>The eraser tool is used to erase stuff. By "erase" I mean draw with white. Yeah, this app doesn't support transparency, so that's pretty much
+    expected. You can either erase, wipe the whole screen or do a fill eraser (fill with white).</p>
+    <img src="./img_abandonware/pds_eraser.png" alt="A blank drawing with the eraser tool selected." class="screenshot">
+    <p class="centered-text"><i>The eraser tool interface</i>
+
+    <h3 id="ap9_ft">Fill Tool</h3>
+    <p>The fill tool is used to... fill. Color is chooseable from the same palette as the pencil tool.</p>
+    <img src="./img_abandonware/pds_fill.png" alt="A drawing made using Paint DS demonstrating the capabilities of the Fill Tool. It features a pink
+    blob character sleeping on what appears to be grass. The night sky is also visible." class="screenshot">
+    <p class="centered-text"><i>The fill tool in action</i></p>
+
+    <h3 id="ap9_st">Shape Tool</h3>
+    <p>The last tool available in Paint DS is the shape tool. It allows for the insertion of one of the five available shapes: triangle outline, filled
+    triangle, straight line, rectangle outline and filled rectangle. The color selection is the same as always.</p>
+    <img src="./img_abandonware/pds_shapes.png" alt="A drawing of a primitive house made using Paint DS, demonstrating the capabilities of the Shape
+    Tool." class="screenshot">
+    <p class="centered-text"><i>A primitive house create using the shape tool.</i></p>
+
+    <h3 id="ap9_sd">Sound Design</h3>
+    <p>This thing has one singular sound: the <i>pencil sound</i>. It plays when you draw.</p>
+
+    <h3 id="ap9_c">Conclusion</h3>
+    <p>Paint DS is an application with huge potential! It can allow people to create art on the go and that's... pretty much it? I don't know how to
+    market a painting app. Anyway, this is cool and all but the architecture was absolute garbage. And I couldn't figure out how to draw text on the
+    screen.</p>
+
+    <h2 id="todo">To-do list</h2>
+    <p><small>of course we have one</small></p>
+    <ul>
+        <li>
+            Expand upon entries: <a href="#ap3">JSHS</a>, <a href="#ap7">lwgh</a>
+        </li>
+    </ul>
+
     <hr>
-    <p><small>this is <i>revision 3.3</i></small></p>
+    <p><small>this is <i>revision 4</i></small></p>
     <small>
         <p><b>Revision history</b></p>
         <ul>
+            <li>
+                <i>r4 - March 28, 2024</i>
+                <ul>
+                    <li>Added a note about maintenance mode and finished projects.</li>
+                    <li>Added PaintDS entry.</li>
+                    <li>Added a to-do list.</li>
+                </ul>
+            </li>
             <li>
                 <i>r3.3 - March 26, 2024</i>
                 <ul>
