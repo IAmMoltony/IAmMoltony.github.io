@@ -1,0 +1,2 @@
+#!/bin/sh
+convert -delay 20 -loop 0 frame_number_one.png frame_number_two.png frame_number_three.png frame_number_four.png frame_number_five.png frame_number_six.png sept.png frame_number_eight.png ANIMAT~1.GIF
