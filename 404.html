@@ -10,17 +10,21 @@
 <body background="./Images_FolderIMEAN_directory/tea69.png">
     <div id="stuff">
         <h1>There has been a huge misunderstanding</h1>
-        <p>I'm a website, I don't know what a <span id="qwdqwdqwdqwdqwdqwdqwdqwd"></span> is.</p>
+        <p>I'm a website, I don't know what <span id="Beans"></span> <span id="qwdqwdqwdqwdqwdqwdqwdqwd"></span> is.</p>
         <a href="/index.html" id="OkayThen">I understand</a>
         <hr>
         <a href="https://iammoltony.github.io/banner.htm"><img src="https://iammoltony.github.io/cert/moltony_certified.jpg"></a>
         <i><p>tea via open clipart</p></i>
     </div>
+    <script src="./letters.js"></script>
+    <script src="./article.js"></script>
     <script>
         var asasas = "I understand";
         if (Math.random() < 0.01)
             asasas = "I misunderstand";
+
         document.querySelector("#qwdqwdqwdqwdqwdqwdqwdqwd").innerText = document.location.pathname.substring(1);
+        document.querySelector("#Beans").innerText = ShallPutA(document.location.pathname.substring(1)[0]) ? "a" : "an";
         document.querySelector("#OkayThen").innerText = asasas;
     </script>
 </body>
