@@ -40,7 +40,8 @@ blink {
 /*
  * If da user have no comic sans than they have a different awsome font applied *?/
  * */
-*{ font-family:  "Comic Sans MS","Comic Sans" ,cursive;
+*{
+    font-family: "Comic Sans", "Comic Sans MS",cursive;
 
 }
 #footerText {FONT-Family:Sans-Serif;FONT-SIZE:12px;}
