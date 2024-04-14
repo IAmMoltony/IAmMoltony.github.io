@@ -161,3 +161,11 @@ fieldset legend {
 {
    font-size: 10em; 
 }
+.RED_CROSS
+{
+    color: red;
+}
+
+.GREEN_CHECKMARK                {
+    color: LIME;
+}
