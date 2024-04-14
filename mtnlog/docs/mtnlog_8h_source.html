@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MtnLog
-   &#160;<span id="projectnumber">2.6</span>
+   &#160;<span id="projectnumber">2.7.2</span>
    </div>
    <div id="projectbrief">Moltony&#39;s Logging Library</div>
   </td>
@@ -64,102 +64,123 @@ $(document).ready(function(){initNavTree('mtnlog_8h_source.html',''); initResiza
 <div class="title">mtnlog.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<a href="mtnlog_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef MTNLOG_H_</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define MTNLOG_H_ 1</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#ifdef MTNLOG_NO_STDBOOL</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">    #define MTNLOG_BOOL int</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">    #include &lt;stdbool.h&gt;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">    #define MTNLOG_BOOL bool</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;stdarg.h&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    MTNLOG_INFO = 0, </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    MTNLOG_WARNING = 1, </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    MTNLOG_ERROR = 2, </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;} MtnLogLevel;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">typedef</span> void (*MtnLogCallback)(MtnLogLevel, <span class="keyword">const</span> <span class="keywordtype">char</span> *, <span class="keyword">const</span> <span class="keywordtype">char</span> *);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#ifdef __FILE_NAME__</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">    #ifdef __func__</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">        #define mtnlogMessageC(level, ...) mtnlogMessageCInternal(__LINE__, __FILE_NAME__, __func__, (level), __VA_ARGS__)</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">    #else</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">        #define mtnlogMessageC(level, ...) mtnlogMessageCInternal(__LINE__, __FILE_NAME__, &quot;&quot;</span>, (level), __VA_ARGS__)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">    #endif</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">    #ifdef __func__</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">        #define mtnlogMessageC(level, ...) mtnlogMessageCInternal(__LINE__, __FILE__, __func__, (level), __VA_ARGS__)</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">    #else</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">        #define mtnlogMessageC(level, ...) mtnlogMessageCInternal(__LINE__, __FILE__, &quot;&quot;</span>, (level), __VA_ARGS__)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">    #endif</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#ifdef __FILE_NAME__</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">    #ifdef __func__</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">        #define mtnlogMessageTagC(level, tag, ...) mtnlogMessageTagCInternal(__LINE__, __FILE_NAME__, __func__, (level), (tag), __VA_ARGS__)</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">    #else</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">        #define mtnlogMessageTagC(level, tag, ...) mtnlogMessageTagCInternal(__LINE__, __FILE_NAME__, &quot;&quot;</span>, (level), (tag), __VA_ARGS__)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">    #endif</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">    #ifdef __func__</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">        #define mtnlogMessageTagC(level, tag, ...) mtnlogMessageTagCInternal(__LINE__, __FILE__, __func__, (level), (tag), __VA_ARGS__)</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">    #else</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">        #define mtnlogMessageTagC(level, tag, ...) mtnlogMessageTagCInternal(__LINE__, __FILE__, &quot;&quot;</span>, (level), (tag), __VA_ARGS__)</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">    #endif</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">void</span> mtnlogInit(<span class="keyword">const</span> MtnLogLevel level, <span class="keyword">const</span> <span class="keywordtype">char</span> *logFileName);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keywordtype">void</span> mtnlogColor(<span class="keyword">const</span> MTNLOG_BOOL enable);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;MTNLOG_BOOL mtnlogCheckColor(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keywordtype">void</span> mtnlogConsoleOutput(<span class="keyword">const</span> MTNLOG_BOOL enable);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keywordtype">void</span> mtnlogFileOutput(<span class="keyword">const</span> MTNLOG_BOOL enable);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="keywordtype">void</span> mtnlogSetLevel(<span class="keyword">const</span> MtnLogLevel level);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keywordtype">void</span> mtnlogSetCallback(<span class="keyword">const</span> MtnLogCallback cb);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="keywordtype">void</span> mtnlogTimestamps(<span class="keyword">const</span> MTNLOG_BOOL enable);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="keywordtype">void</span> mtnlogConsoleTimestamps(<span class="keyword">const</span> MTNLOG_BOOL enable);</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="keywordtype">void</span> mtnlogMessage(<span class="keyword">const</span> MtnLogLevel level, <span class="keyword">const</span> <span class="keywordtype">char</span> *format, ...);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="keywordtype">void</span> mtnlogVMessage(<span class="keyword">const</span> MtnLogLevel level, <span class="keyword">const</span> <span class="keywordtype">char</span> *format, va_list l);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="keywordtype">void</span> mtnlogMessageTag(<span class="keyword">const</span> MtnLogLevel level, <span class="keyword">const</span> <span class="keywordtype">char</span> *tag, <span class="keyword">const</span> <span class="keywordtype">char</span> *format, ...);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="keywordtype">void</span> mtnlogVMessageTag(<span class="keyword">const</span> MtnLogLevel level, <span class="keyword">const</span> <span class="keywordtype">char</span> *tag, <span class="keyword">const</span> <span class="keywordtype">char</span> *format, va_list l);</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="keywordtype">void</span> mtnlogMessageCInternal(<span class="keyword">const</span> <span class="keywordtype">int</span> line, <span class="keyword">const</span> <span class="keywordtype">char</span> *file, <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">function</span>, <span class="keyword">const</span> MtnLogLevel level, <span class="keyword">const</span> <span class="keywordtype">char</span> *message, ...);</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="keywordtype">void</span> mtnlogMessageTagCInternal(<span class="keyword">const</span> <span class="keywordtype">int</span> line, <span class="keyword">const</span> <span class="keywordtype">char</span> *file, <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">function</span>, <span class="keyword">const</span> MtnLogLevel level, <span class="keyword">const</span> <span class="keywordtype">char</span> *tag, <span class="keyword">const</span> <span class="keywordtype">char</span> *message, ...);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;}</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifdef MTNLOG_NO_STDBOOL</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">    #define MTNLOG_BOOL int</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">    #include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#a13b389ddd0ffe1ef934130995bf457fc">   23</a></span>&#160;<span class="preprocessor">    #define MTNLOG_BOOL bool</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;stdarg.h&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177">   31</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177aba3ca7919450baca5d2d9699a9be141a">   33</a></span>&#160;    <a class="code" href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177aba3ca7919450baca5d2d9699a9be141a">MTNLOG_INFO</a> = 0, </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177ad9e21e47518770cee49085a3d3d134e8">   34</a></span>&#160;    <a class="code" href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177ad9e21e47518770cee49085a3d3d134e8">MTNLOG_WARNING</a> = 1, </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177a570f1726bcaff81cce3292608b0eb406">   35</a></span>&#160;    <a class="code" href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177a570f1726bcaff81cce3292608b0eb406">MTNLOG_ERROR</a> = 2, </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;} <a class="code" href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#a384d7f815022797906c46ec560fe8c73">   47</a></span>&#160;<span class="keyword">typedef</span> void (*<a class="code" href="mtnlog_8h.html#a384d7f815022797906c46ec560fe8c73">MtnLogCallback</a>)(<a class="code" href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a>, <span class="keyword">const</span> <span class="keywordtype">char</span> *, <span class="keyword">const</span> <span class="keywordtype">char</span> *);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#ifdef __FILE_NAME__</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">    #ifdef __func__</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">        #define mtnlogMessageC(level, ...) mtnlogMessageCInternal(__LINE__, __FILE_NAME__, __func__, (level), __VA_ARGS__)</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">    #else</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">        #define mtnlogMessageC(level, ...) mtnlogMessageCInternal(__LINE__, __FILE_NAME__, &quot;&quot;</span>, (level), __VA_ARGS__)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">    #ifdef __func__</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">        #define mtnlogMessageC(level, ...) mtnlogMessageCInternal(__LINE__, __FILE__, __func__, (level), __VA_ARGS__)</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">    #else</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#a58aa7b023caa3a52cfb93a33e048a304">   64</a></span>&#160;<span class="preprocessor">        #define mtnlogMessageC(level, ...) mtnlogMessageCInternal(__LINE__, __FILE__, &quot;&quot;</span>, (level), __VA_ARGS__)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#ifdef __FILE_NAME__</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">    #ifdef __func__</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">        #define mtnlogMessageTagC(level, tag, ...) mtnlogMessageTagCInternal(__LINE__, __FILE_NAME__, __func__, (level), (tag), __VA_ARGS__)</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">    #else</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">        #define mtnlogMessageTagC(level, tag, ...) mtnlogMessageTagCInternal(__LINE__, __FILE_NAME__, &quot;&quot;</span>, (level), (tag), __VA_ARGS__)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">    #ifdef __func__</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">        #define mtnlogMessageTagC(level, tag, ...) mtnlogMessageTagCInternal(__LINE__, __FILE__, __func__, (level), (tag), __VA_ARGS__)</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">    #else</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#a89a1a167ec9f4e04d7970012d1efbb17">   84</a></span>&#160;<span class="preprocessor">        #define mtnlogMessageTagC(level, tag, ...) mtnlogMessageTagCInternal(__LINE__, __FILE__, &quot;&quot;</span>, (level), (tag), __VA_ARGS__)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#aca99dccb03f66303bcfd59333bf048ba">   97</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="mtnlog_8h.html#aca99dccb03f66303bcfd59333bf048ba">mtnlogInit</a>(<span class="keyword">const</span> <a class="code" href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a> level, <span class="keyword">const</span> <span class="keywordtype">char</span> *logFileName);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#ac10c9ffd014337834a0f99b0f5da45d3">  105</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="mtnlog_8h.html#ac10c9ffd014337834a0f99b0f5da45d3">mtnlogColor</a>(<span class="keyword">const</span> <a class="code" href="mtnlog_8h.html#a13b389ddd0ffe1ef934130995bf457fc">MTNLOG_BOOL</a> enable);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#a71eb540d0b5f2421e11de69369084d0b">  114</a></span>&#160;<a class="code" href="mtnlog_8h.html#a13b389ddd0ffe1ef934130995bf457fc">MTNLOG_BOOL</a> <a class="code" href="mtnlog_8h.html#a71eb540d0b5f2421e11de69369084d0b">mtnlogCheckColor</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#ab57afa4a01d73a3e725415de743d2e6c">  120</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="mtnlog_8h.html#ab57afa4a01d73a3e725415de743d2e6c">mtnlogConsoleOutput</a>(<span class="keyword">const</span> <a class="code" href="mtnlog_8h.html#a13b389ddd0ffe1ef934130995bf457fc">MTNLOG_BOOL</a> enable);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#abc50b64b27121207fc919f8f893e2145">  128</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="mtnlog_8h.html#abc50b64b27121207fc919f8f893e2145">mtnlogFileOutput</a>(<span class="keyword">const</span> <a class="code" href="mtnlog_8h.html#a13b389ddd0ffe1ef934130995bf457fc">MTNLOG_BOOL</a> enable);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#aee8f2cb1f38b72f9fd22f9ed49353a78">  134</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="mtnlog_8h.html#aee8f2cb1f38b72f9fd22f9ed49353a78">mtnlogSetLevel</a>(<span class="keyword">const</span> <a class="code" href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a> level);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#aa0ac08244e52826e41dbedf8c1742db9">  140</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="mtnlog_8h.html#aa0ac08244e52826e41dbedf8c1742db9">mtnlogSetCallback</a>(<span class="keyword">const</span> <a class="code" href="mtnlog_8h.html#a384d7f815022797906c46ec560fe8c73">MtnLogCallback</a> cb);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#aaa42b9b2fd72e3433142dff0f09379c9">  146</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="mtnlog_8h.html#aaa42b9b2fd72e3433142dff0f09379c9">mtnlogTimestamps</a>(<span class="keyword">const</span> <a class="code" href="mtnlog_8h.html#a13b389ddd0ffe1ef934130995bf457fc">MTNLOG_BOOL</a> enable);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#ae5627baf3c065512af7841638a369af1">  152</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="mtnlog_8h.html#ae5627baf3c065512af7841638a369af1">mtnlogConsoleTimestamps</a>(<span class="keyword">const</span> <a class="code" href="mtnlog_8h.html#a13b389ddd0ffe1ef934130995bf457fc">MTNLOG_BOOL</a> enable);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#a6f82e4dc814f73a22638daf81c3b21ed">  161</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="mtnlog_8h.html#a6f82e4dc814f73a22638daf81c3b21ed">mtnlogMessage</a>(<span class="keyword">const</span> <a class="code" href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a> level, <span class="keyword">const</span> <span class="keywordtype">char</span> *format, ...);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#ad6a803016f57b67823d11c832c504edd">  170</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="mtnlog_8h.html#ad6a803016f57b67823d11c832c504edd">mtnlogVMessage</a>(<span class="keyword">const</span> <a class="code" href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a> level, <span class="keyword">const</span> <span class="keywordtype">char</span> *format, va_list l);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#a792a279d157d73c3d7ae2eb0d9dfa37a">  179</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="mtnlog_8h.html#a792a279d157d73c3d7ae2eb0d9dfa37a">mtnlogMessageTag</a>(<span class="keyword">const</span> <a class="code" href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a> level, <span class="keyword">const</span> <span class="keywordtype">char</span> *tag, <span class="keyword">const</span> <span class="keywordtype">char</span> *format, ...);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#aa3ecea232d5927e4c2107f0d72899663">  189</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="mtnlog_8h.html#aa3ecea232d5927e4c2107f0d72899663">mtnlogVMessageTag</a>(<span class="keyword">const</span> <a class="code" href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a> level, <span class="keyword">const</span> <span class="keywordtype">char</span> *tag, <span class="keyword">const</span> <span class="keywordtype">char</span> *format, va_list l);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#a2630e29162297bdac65524bccb38474b">  196</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="mtnlog_8h.html#a2630e29162297bdac65524bccb38474b">mtnlogMessageCInternal</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> line, <span class="keyword">const</span> <span class="keywordtype">char</span> *file, <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">function</span>, <span class="keyword">const</span> <a class="code" href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a> level, <span class="keyword">const</span> <span class="keywordtype">char</span> *message, ...);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="mtnlog_8h.html#a966b3bdc1ac98bdb456328a2b835ceaf">  203</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="mtnlog_8h.html#a966b3bdc1ac98bdb456328a2b835ceaf">mtnlogMessageTagCInternal</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> line, <span class="keyword">const</span> <span class="keywordtype">char</span> *file, <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">function</span>, <span class="keyword">const</span> <a class="code" href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a> level, <span class="keyword">const</span> <span class="keywordtype">char</span> *tag, <span class="keyword">const</span> <span class="keywordtype">char</span> *message, ...);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="ttc" id="amtnlog_8h_html_a13b389ddd0ffe1ef934130995bf457fc"><div class="ttname"><a href="mtnlog_8h.html#a13b389ddd0ffe1ef934130995bf457fc">MTNLOG_BOOL</a></div><div class="ttdeci">#define MTNLOG_BOOL</div><div class="ttdoc">MtnLog boolean type.</div><div class="ttdef"><b>Definition:</b> mtnlog.h:23</div></div>
+<div class="ttc" id="amtnlog_8h_html_a2630e29162297bdac65524bccb38474b"><div class="ttname"><a href="mtnlog_8h.html#a2630e29162297bdac65524bccb38474b">mtnlogMessageCInternal</a></div><div class="ttdeci">void mtnlogMessageCInternal(const int line, const char *file, const char *function, const MtnLogLevel level, const char *message,...)</div><div class="ttdoc">Internal function for mtnlogMessageC.</div></div>
+<div class="ttc" id="amtnlog_8h_html_a384d7f815022797906c46ec560fe8c73"><div class="ttname"><a href="mtnlog_8h.html#a384d7f815022797906c46ec560fe8c73">MtnLogCallback</a></div><div class="ttdeci">void(* MtnLogCallback)(MtnLogLevel, const char *, const char *)</div><div class="ttdoc">Log callback function.</div><div class="ttdef"><b>Definition:</b> mtnlog.h:47</div></div>
+<div class="ttc" id="amtnlog_8h_html_a6f82e4dc814f73a22638daf81c3b21ed"><div class="ttname"><a href="mtnlog_8h.html#a6f82e4dc814f73a22638daf81c3b21ed">mtnlogMessage</a></div><div class="ttdeci">void mtnlogMessage(const MtnLogLevel level, const char *format,...)</div><div class="ttdoc">Print a message to the log.</div></div>
+<div class="ttc" id="amtnlog_8h_html_a71eb540d0b5f2421e11de69369084d0b"><div class="ttname"><a href="mtnlog_8h.html#a71eb540d0b5f2421e11de69369084d0b">mtnlogCheckColor</a></div><div class="ttdeci">MTNLOG_BOOL mtnlogCheckColor(void)</div><div class="ttdoc">Check if color is supported.</div></div>
+<div class="ttc" id="amtnlog_8h_html_a792a279d157d73c3d7ae2eb0d9dfa37a"><div class="ttname"><a href="mtnlog_8h.html#a792a279d157d73c3d7ae2eb0d9dfa37a">mtnlogMessageTag</a></div><div class="ttdeci">void mtnlogMessageTag(const MtnLogLevel level, const char *tag, const char *format,...)</div><div class="ttdoc">Print a message to the log with a tag.</div></div>
+<div class="ttc" id="amtnlog_8h_html_a966b3bdc1ac98bdb456328a2b835ceaf"><div class="ttname"><a href="mtnlog_8h.html#a966b3bdc1ac98bdb456328a2b835ceaf">mtnlogMessageTagCInternal</a></div><div class="ttdeci">void mtnlogMessageTagCInternal(const int line, const char *file, const char *function, const MtnLogLevel level, const char *tag, const char *message,...)</div><div class="ttdoc">Internal function for mtnlogMessageTagC.</div></div>
+<div class="ttc" id="amtnlog_8h_html_aa0ac08244e52826e41dbedf8c1742db9"><div class="ttname"><a href="mtnlog_8h.html#aa0ac08244e52826e41dbedf8c1742db9">mtnlogSetCallback</a></div><div class="ttdeci">void mtnlogSetCallback(const MtnLogCallback cb)</div><div class="ttdoc">Set log callback.</div></div>
+<div class="ttc" id="amtnlog_8h_html_aa3ecea232d5927e4c2107f0d72899663"><div class="ttname"><a href="mtnlog_8h.html#aa3ecea232d5927e4c2107f0d72899663">mtnlogVMessageTag</a></div><div class="ttdeci">void mtnlogVMessageTag(const MtnLogLevel level, const char *tag, const char *format, va_list l)</div><div class="ttdoc">Print a message to the log with a tag (VA list version)</div></div>
+<div class="ttc" id="amtnlog_8h_html_aaa42b9b2fd72e3433142dff0f09379c9"><div class="ttname"><a href="mtnlog_8h.html#aaa42b9b2fd72e3433142dff0f09379c9">mtnlogTimestamps</a></div><div class="ttdeci">void mtnlogTimestamps(const MTNLOG_BOOL enable)</div><div class="ttdoc">Enable or disable log timestamps.</div></div>
+<div class="ttc" id="amtnlog_8h_html_ab57afa4a01d73a3e725415de743d2e6c"><div class="ttname"><a href="mtnlog_8h.html#ab57afa4a01d73a3e725415de743d2e6c">mtnlogConsoleOutput</a></div><div class="ttdeci">void mtnlogConsoleOutput(const MTNLOG_BOOL enable)</div><div class="ttdoc">Enable or disable outputting log messages into console (stdout)</div></div>
+<div class="ttc" id="amtnlog_8h_html_abc50b64b27121207fc919f8f893e2145"><div class="ttname"><a href="mtnlog_8h.html#abc50b64b27121207fc919f8f893e2145">mtnlogFileOutput</a></div><div class="ttdeci">void mtnlogFileOutput(const MTNLOG_BOOL enable)</div><div class="ttdoc">Enable or disable outputting log messages into the log file.</div></div>
+<div class="ttc" id="amtnlog_8h_html_ac10c9ffd014337834a0f99b0f5da45d3"><div class="ttname"><a href="mtnlog_8h.html#ac10c9ffd014337834a0f99b0f5da45d3">mtnlogColor</a></div><div class="ttdeci">void mtnlogColor(const MTNLOG_BOOL enable)</div><div class="ttdoc">Enable or disable color for messages.</div></div>
+<div class="ttc" id="amtnlog_8h_html_aca99dccb03f66303bcfd59333bf048ba"><div class="ttname"><a href="mtnlog_8h.html#aca99dccb03f66303bcfd59333bf048ba">mtnlogInit</a></div><div class="ttdeci">void mtnlogInit(const MtnLogLevel level, const char *logFileName)</div><div class="ttdoc">Initialize logging.</div></div>
+<div class="ttc" id="amtnlog_8h_html_ad6a803016f57b67823d11c832c504edd"><div class="ttname"><a href="mtnlog_8h.html#ad6a803016f57b67823d11c832c504edd">mtnlogVMessage</a></div><div class="ttdeci">void mtnlogVMessage(const MtnLogLevel level, const char *format, va_list l)</div><div class="ttdoc">Print a message to the log (VA list version)</div></div>
+<div class="ttc" id="amtnlog_8h_html_add77a7adbcdf0fd598df5ba21fb57177"><div class="ttname"><a href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177">MtnLogLevel</a></div><div class="ttdeci">MtnLogLevel</div><div class="ttdoc">Enum representing logging level.</div><div class="ttdef"><b>Definition:</b> mtnlog.h:32</div></div>
+<div class="ttc" id="amtnlog_8h_html_add77a7adbcdf0fd598df5ba21fb57177a570f1726bcaff81cce3292608b0eb406"><div class="ttname"><a href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177a570f1726bcaff81cce3292608b0eb406">MTNLOG_ERROR</a></div><div class="ttdeci">@ MTNLOG_ERROR</div><div class="ttdef"><b>Definition:</b> mtnlog.h:35</div></div>
+<div class="ttc" id="amtnlog_8h_html_add77a7adbcdf0fd598df5ba21fb57177aba3ca7919450baca5d2d9699a9be141a"><div class="ttname"><a href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177aba3ca7919450baca5d2d9699a9be141a">MTNLOG_INFO</a></div><div class="ttdeci">@ MTNLOG_INFO</div><div class="ttdef"><b>Definition:</b> mtnlog.h:33</div></div>
+<div class="ttc" id="amtnlog_8h_html_add77a7adbcdf0fd598df5ba21fb57177ad9e21e47518770cee49085a3d3d134e8"><div class="ttname"><a href="mtnlog_8h.html#add77a7adbcdf0fd598df5ba21fb57177ad9e21e47518770cee49085a3d3d134e8">MTNLOG_WARNING</a></div><div class="ttdeci">@ MTNLOG_WARNING</div><div class="ttdef"><b>Definition:</b> mtnlog.h:34</div></div>
+<div class="ttc" id="amtnlog_8h_html_ae5627baf3c065512af7841638a369af1"><div class="ttname"><a href="mtnlog_8h.html#ae5627baf3c065512af7841638a369af1">mtnlogConsoleTimestamps</a></div><div class="ttdeci">void mtnlogConsoleTimestamps(const MTNLOG_BOOL enable)</div><div class="ttdoc">Enable or disable putting timestamps in console.</div></div>
+<div class="ttc" id="amtnlog_8h_html_aee8f2cb1f38b72f9fd22f9ed49353a78"><div class="ttname"><a href="mtnlog_8h.html#aee8f2cb1f38b72f9fd22f9ed49353a78">mtnlogSetLevel</a></div><div class="ttdeci">void mtnlogSetLevel(const MtnLogLevel level)</div><div class="ttdoc">Set logging level.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>mtnlog.h</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="mtnlog_8h.html">mtnlog.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
