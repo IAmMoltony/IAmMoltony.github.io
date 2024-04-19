@@ -1,3 +1,7 @@
+:root {
+    --gjgjgjgjgj: darkkhaki;
+}
+
 body
 {
     background-color: magenta;
@@ -168,4 +172,54 @@ fieldset legend {
 
 .GREEN_CHECKMARK                {
     color: LIME;
+}
+
+.hell_yeah {
+    animation: seizure 0.5s infinite;
+    /*AND MAKE IT FRICKING G I I I I I I A A A A A AN N N N N N T T T T T T *!!!!!/*/
+    FONT-SIZE: 10em;
+}
+
+@keyframes seizure {
+    0% {
+        color:RED;
+        background-color: fuchsia;
+    }
+    10%              {
+
+
+coloR: ORANGE;
+background-color:lightcoral;
+    }
+    20% {
+        color: LIME;background-color:lightsalmon;
+    }
+    30% {
+        color: purple;
+        background-color: goldenrod;
+    }
+    40% {
+        color: SkyBlUe;
+        background-color:black;
+    }
+    50% {
+        color: Yellow;
+        background-color: white;
+    }
+    60% {
+        color: YellowGREEN;
+        background-color:red
+    }
+    70% {
+        color: navajowhite;
+        background-color:pink;
+    }
+    80% {
+        color: brown;background-color:teal
+    }90%{color:blanchedalmond       
+    
+    
+    ;background-color:darkgrey}100%{color:     hotpink;background-color:var(--gjgjgjgjgj)}
+
+
 }
