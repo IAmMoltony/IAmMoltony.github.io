@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./abandonwarestyle.css">
     <link rel="shortcut icon" href="Images_FolderIMEAN_directory/FAVICOTONY.png" type="image/png">
-    <title>Moltony's Abandoned Projects (Revision 5.4)</title>
+    <title>Moltony's Abandoned Projects (Revision 5.4.1)</title>
 </head>
 <body>
     <a href="index.html">&lt; go back to the horriblel index page</a>
     <h1 id="h">Moltony's Abandoned Projects</h1>
-    <p>Overtime I have written many, many, many programs and scripts. Many of them I abandon eventually. Here's a list of some
+    <p>Over time I have written many, many, many programs and scripts. Many of them I abandon eventually. Here's a list of some
     of the projects I have abandoned.</p>
 
     <p>This page doesn't include maintenance mode projects (e.g. <a href="https://github.com/IAmMoltony/libmtnlog">MtnLog</a>)
@@ -166,12 +166,18 @@
         </ol>
     </fieldset>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h2 id="ap1">Abandoned Project One: Dodge Them All <a href="#h" class="up-button">up</a></h2>
+
     <p><a href="https://github.com/IAmMoltony/DodgeSrc">Look at the de-compiled source code</a></p>
+
     <p>Dodge Them All was the first time I used <i>Java</i> for game development. It's a simple 2D game where you dodge colored
     squares. It's kind of like Touhou but without attacks or bomb and it's theoretically infinite. I made it when I was like 10.</p>
+
     <p>The game was published on GameJolt <a href="https://gamejolt.com/games/dodgethemall/613793">here</a>. It even has a
     description:</p>
+
     <div class="quote">Dodge Them All is a small but intense game, where you have to dodge enemies and collect coins.<br>
     Introducing:
 
@@ -190,57 +196,83 @@
 
     And that is all! I think you will like this game. If you found bugs or something like that, let me know. #action #adventure #retro #arcade #other</div>
     <p>What a great description.</p>
+
     <p>So, how is the game actually like? Does it live up to the description? Let's take a look.</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h3 id="ap1_gp">How the Gameplay is Like <a href="#h" class="up-button">up</a></h3>
+
     <p>Opening up the game, we see the title screen:</p>
-    <img src="./img_abandonware/dta-ts.png" alt="DodgeThemAll title screen, featuring the game name on top, bouncing squares in the background, and
+
+    <img src="./img_abandonware/dta-ts.png" alt="Dodge Them All title screen, featuring the game name on top, bouncing squares in the background, and
     yellow text, called the splash, reading 'variable splash might have already been assigned'. On the bottom half of the screen, three buttons
     are visible: 'Play', 'Help' and 'Exit'." class="screenshot">
     <p class="centered-text"><i>Dodge Them All title screen</i></p>
+
     <p>This is.. a title screen alright. Also it runs at like 5fps, which is not that surprising considering my system is really
     slow and the title screen background has bouncing blocks all over the place.</p>
+
     <p>Now let's finally look at the gameplay! Pressing play we are greeted to the following.</p>
+
     <img src="./img_abandonware/dta-firstplay.png" alt="The screen you see when clicking on 'Play' at the title screen. Text below
     describes the image quite well." class="screenshot">
+
     <p class="centered-text"><i>Dodge Them All gameplay</i></p>
+
     <p>The game runs quite poorly even outside of the title screen. Really shows that I put zero effort into optimizing this game, doesn't it?
     Whatever. Right off the bat, we can see:</p>
+
     <ul>
         <li>A white square. You play as him/them/her.</li>
         <li>A coin. When a coin is collected, you're given some score. The amount of score is calculated by this formula: <b>100 + 10 * (current level - 1)</b></li>
         <li>The HUD. It displays the player's health, score, current level, how many coins have been collected, how much score you need to level up,
             some instructions telling us to press space to open the shop and a FPS counter.</li>
     </ul>
+
     <p>Each time you level up, an enemy spawns. Also, I encountered a bug where after going to the next level my character started
     constantly going down for no reason. Bugs are something this game has a lot of. I did do some play testing but ultimately
     I had no idea what I was doing and couldn't really solve many issues. For example, there's a bug that causes coins not to produce
     sounds after collecting them (accompanied by an exception).</p>
+
     <p>The player has 100 health initially. When you run out of health, the game is over. The game over screen looks like this.</p>
+
     <img src="./img_abandonware/dta-over.png" alt="Dodge Them All's game over screen. It features the words 'Game over!' on the top
     of the screen. Below that, the level that the player was on when the game over happened is displayed. On the bottom of the screen
     a button for trying again is visible. The button text goes out of bounds of the button box." class="screenshot">
+
     <p class="centered-text"><i>Dodge Them All's game over screen</i></p>
+
     <p>Yup that's the game over screen. Looks basic, just like everything else in this game. I mean, the description did state that
     its art was made in paint, so at least it's not lying. By the way, did you notice that cyan square guy? That's the result of
     <i>me having absolutely no idea what the actual hell i was doing</i>, so for whatever reason not all enemies actually de-spawned
     when you game-overed.</p>
+
     <p>The game also has a boss, which is just a big red square shooting bullets, but I can't bother myself to actually play the
     game enough to get to it. Maybe you'll reach it, it's not that hard.</p>
+
     <p>The game also features a shop where you can buy upgrades. You can upgrade your speed (I don't know why you would do that in a
     bullet-hell game), upgrade max health and refill health, all for coins you collect. Every time you buy something, it gets more and
     more expensive.</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h3 id="ap1_s">Settings <a href="#h" class="up-button">up</a></h3>
+
     <p>This game actually has settings. They don't save, so they reset every time you start the game. There's a total of three settings:
     <i>skin</i>, <i>enable/disable trail</i> and <i>developer mode</i></p>
 
     <img src="./img_abandonware/dta-options.png" alt="Settings screen" class="screenshot">
+
     <p class="centered-text"><i>Settings screen</i></p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h4 id="ap1_s_s">Skins <a href="#h" class="up-button">up</a></h4>
+
     <p>The game has four skins to choose from: <i>Standard</i>, <i>Geometry Dash</i>, <i>Spiral</i> and <i>Recursion</i>. Here's how
     each skin looks like:</p>
+
     <table>
         <tr>
             <th>Skin</th>
@@ -264,11 +296,18 @@
         </tr>
     </table>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h4 id="ap1_s_too">Trail on/off <a href="#h" class="up-button">up</a></h4>
+
     <p>This option is pretty self-explainatory. It allows you to disable trail in the game altogether, possibly boosting framerate.</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h4 id="ap1_s_dm">Developer Mode <a href="#h" class="up-button">up</a></h4>
+
     <p>This game has a developer mode built right in. It enables certain keys on the keyboard to do certain mischievous things.</p>
+
     <table>
         <tr>
             <th>Key</th>
@@ -320,20 +359,33 @@
         </tr>
     </table>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h3 id="ap1_sd">Sound Design <a href="#h" class="up-button">up</a></h3>
+
     <p>There's one last thing I want to talk about before ending this section, and that is the game's <i>sounds</i>.</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h4 id="ap1_sd_m">Music <a href="#h" class="up-button">up</a></h4>
+
     <p>The game's soundtrack is super basic and quite mid. It was made in a program called Bosca Ceoil, which is a simple tool
     for making music. There's nothing very special about it and it's like ten seconds long.</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h4 id="ap1_sd_se">Sound Effects <a href="#h" class="up-button">up</a></h4>
+
     <p>The sound effects are all "retro-styled" as the description puts it. They're all quite basic and not really worth talking about
     in depth.</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h3 id="ap1_ff">Fun Facts <a href="#h" class="up-button">up</a></h3>
+
     <p>When <a href="https://github.com/IAmMoltony/DodgeSrc">decompiling the game</a>, I stumbled upon some interesting things, and in
     this section we'll take a look at them.</p>
+
     <ol>
         <li>All settings are stored in a file called <span class="monospace">ExtraStuff</span>, which is quite a weird name.</li>
         <li>
@@ -349,29 +401,46 @@
         <li>Basically every object in the game that generates random numbers has its own random number generator instead of using a shared one.</li>
     </ol>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h3 id="ap1_ur">Unity Remake <a href="#h" class="up-button">up</a></h3>
+
     <p>At some point, I started working on a remake of this game using the Unity engine. It had three-dimensional graphics, original sprites
     and that's as far as I remember of this game. I unfortunately can't show it to you since I lost the source code and don't have any screenshots.</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h3 id="ap1_c">Conclusion <a href="#h" class="up-button">up</a></h3>
+
     <p>Dodge Them All truly shows how much I have come in game development and programming in general in a relatively short amount of
     time (~3 years). And even if this game isn't that special or that good, it still holds a special place in my heart.</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h2 id="ap2">Abandoned Project Two: Dodge Them All Rewrite <a href="#h" class="up-button">up</a></h2>
+
     <p>About a year after the release of <abbr title="Dodge Them All">DTA</abbr>, I remade the entire game in Electron using JavaScript. Unlike the original,
     the rewrite is actually open source and can be found <a href="https://github.com/lispy2010/dodgethemall">here</a>, on GitHub. However,
     running it isn't as easy as just downloading and running an executable - you'll have to install Node.JS and Electron. I might want
     to publish pre-compiled builds.</p>
-    <p>I don't really consider this one "unfinished" per se, since I see the game as very complete, but still decided to include it here
-    just for no reason.</p>
+
+    <p>I don't really consider this one "unfinished" per se, since I see the game as very complete, but there were some features I wanted to
+    include that didn't make the final cut.</p>
+
     <p>When I tried to compile the game, I encountered several compilation issues. Luckily, all the compiled files were included in the
     source code, which is generally not what you're supposed to do but I didn't really know how to keep a GitHub repository back then
     so I'll let this one slide.</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h3 id="ap2_tg">The Gameplay <a href="#h" class="up-button">up</a></h3>
+
     <p>Unlike the last game, this one runs really well. Here's the title screen:</p>
+
     <img src="./img_abandonware/dta-rw-title.png" alt="DTARW title screen" class="screenshot">
+
     <p class="centered-text"><i>DTARW title screen</i></p>
+
     <p>Do you see it? <b><i>A STYLIZED FONT!!</i></b> Yep, instead of using a default font, this time we have a good font. That is very
     nice indeed. As per usual, the game's name, three buttons. Except this time, instead of an exit button we have a sandbox button. The sandbox
     is a feature that was supposed to be included in the original game, but in a tragic series of events I lost the original source code and
@@ -379,20 +448,29 @@
     text. This actually is a beta version, because I wanted to implement a couple features but I'm lazy ahh hell and I just forgot. Splash text
     is still in the game, but in a different form - now the game modifies the title of the window instead of adding text on the title screen.
     There are a total of a lot of splashes, half of which are keyboard puns and jokes about this game being a rage game.</p>
+
     <p>Enough rambling let's get into the action!!!!!!</p>
+
     <img src="./img_abandonware/dta-rw-firstplay.png" alt="DTARW gameplay" class="screenshot">
+
     <p class="centered-text"><i>DTARW gameplay</i></p>
+
     <p>First impressions: way better than DTA. The background has little gray particles that kinda look like stars, the HUD is way better and the
     performance is ten billion percent better. You can even pause it by pressing Escape! The original game also technically had pause functionality
     when you go into the shop but having a dedicated pause screen is way nicer.</p>
+
     <p>And what do you see? An enemy! The game prepares you to dodge enemies right from the beginning instead of giving you a random coin and expecting
     you to collect it. The scoring system was also changed quite a bit. Instead of score being incremented every time you pick up a coin (which can be super
     difficult when reaching higher levels with more enemies), score instead goes up automatically each frame. The shop is still here, and
     worse than ever. The only item in the shop is a health boost - +10HP for 7 coins. Inflation really hit DTA...</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h3 id="ap2_ne">New Enemies <a href="#h" class="up-button">up</a></h3>
+
     <p>The rewrite still includes all of the same enemies that the original Java edition has, but more. Here's the full list of new guys
     that joined the family:</p>
+
     <ul>
         <li>The rainbow guy. He bounces like a ball and changes color like a rainbow. This is my first original enemy idea for this game,
             and it's quite cool <abbr title="in my opinion">IMO</abbr>.</li>
@@ -400,11 +478,16 @@
         <li>The walking guy. He just walks...menacingly. He does not care about the player whatsoever.</li>
         <li>The snake guy. He moves in a sine wave, like a snake!</li>
     </ul>
+
     <p>There's also the boss, but I'm not sure if he's actually functional. It's definitely a bug, since code that spawns the boss is
     included and I remember it working. <abbr title="I don't know">IDK</abbr>...</p>
+
     <p>One of the defining features of this remake is the <i>sandbox</i>. This is a place where you can make your custom enemy!</p>
+
     <img src="./img_abandonware/dta-rw-sandbox.png" alt="DTARW sandbox screen. The player's custom enemy is contained in a box on the left." class="screenshot">
+
     <p class="centered-text"><i>Sandbox screen</i></p>
+
     <p>I'm quite proud of this interface. So clean, so nice... Designing this was an absolute nightmare because of the sheer amount of UI elements
     in the sandbox. On the left, we have our custom enemy. He's in a box and can never escape. On the right, we can change the enemy however
     we want. First, we have the speed controls - changing the X and Y velocity. Below that is the enemy color chooser - red, green, blue,
@@ -412,69 +495,118 @@
     and the "!" button brings up a box where you can set a color yourself based on RGB values. On the very bottom there is an enemy reset
     button which resets the enemy back to the same as a red one. Yeah, the sandbox is a bit underwhelming, but it is what it is.</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h3 id="ap2_sd">Sound Design <a href="#h" class="up-button">up</a></h3>
+
     <p>The game does a bit better in terms of sound design. They're still "retro-styled" and there is nothing to say about them. They're
     alright. There's no background music to accompany you, though... I think that's better, actually. The ten-second track from the original
     can definitely make someone go nuts if they play for an extended period of time. Not that anyone would do that, however.</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h3 id="ap2_c">Conclusion <a href="#h" class="up-button">up</a></h3>
+
     <p>The Dodge Them All Rewrite is just a better, shinier, faster version of Dodge Them All. I don't know what to say, really. It's great,
     you should play it if you really want to idk do whatever tf you want i don't care</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h2 id="ap3">Abandoned Project Three: <abbr title="JavaScript Home Server">JSHS</abbr> <a href="#h" class="up-button">up</a></h2>
+
     <p><a href="https://github.com/IAmMoltony/jshs">JSHS source code</a></p>
+
     <p>JSHS is a simple home server software written in JavaScript. I made it when trying to make a home server. But then I found out about
     CasaOS, which is a lot better, better, better, and also prettier. JSHS features a simple file manager, very primitive security in the form
     of a single password, and that's basically it. I abandoned it once I found about about CasaOS, which was way better and more mature.</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h2 id="ap4">Abandoned Project Four: Pikurosu <a href="#h" class="up-button">up</a></h2>
+
     <p><a href="https://github.com/IAmMoltony/pikurosu">Pikurosu source code</a></p>
+
     <p>Pikurosu is a Nonogram/Picross game for PC. It was superseded by nonoSharp, which is active and isn't pure spaghetti code. I stopped
     working on this when I found out that C isn't a great language for game dev (some might argue), and I was much more familiar with C#. So
     I switched to C# and made nonoSharp.</p>
+
     <img src="./img_abandonware/pikurosu-ns.png" alt="Left: pikurosu. Right: nonoSharp" class="screenshot">
+
     <p class="centered-text"><i>Comparison of pikurosu and nonoSharp</i></p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h2 id="ap5">Abandoned Project Five: Squarity <a href="#h" class="up-button">up</a></h2>
+
     <p><a href="https://github.com/IAmMoltony/Squarity">Squarity source code</a></p>
+
     <p>NO NOT DTA AGAIN!!! This was supposed to be a rewrite of <abbr title="Dodge Them All Rewrite">DTARW</abbr> in C++. I simply did not want to. I'm done with
     this square dodge square thing!</p>
+
     <p><small><i>a rewrite of a rewrite...</i></small></p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h2 id="ap6">Abandoned Project Six: Number Go Up <a href="#h" class="up-button">up</a></h2>
+
     <p><a href="https://github.com/IAmMoltony/NumberGoUp">Number Go Up source code</a></p>
+
     <p>Number Go Up is a very very very simple game where you have to make the number go up</p>
+
     <p>I abandoned this one because I don't use Windows anymore on my system and setting up GMS2 (which is the engine this game uses), well I'm too lazy for
     that</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h3 id="ap6_tg">The Gameplay <a href="#h" class="up-button">up</a></h3>
+
     <p>you spam your keyboard and number go up</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h4 id="ap6_tg_whiydstk">What Happens If You Don't Spam The Keyboard <a href="#h" class="up-button">up</a></h4>
+
     <p>number goes down</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h2 id="ap7">Abandoned Project Seven: <abbr title="Lightweight GitHub">lwgh</abbr> <a href="#h" class="up-button">up</a></h2>
+
     <p><a href="https://github.com/IAmMoltony/lwgh">lwgh source code</a></p>
+
     <p>lwgh is a CLI tool for accessing GitHub. I made it back when I didn't like using the browser at all, but looking back... Browser is better anyway.
     Besides, the code I wrote for this little app was very spaghetti early on.</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h2 id="ap8">Abandoned Project Eight: NDSvi <a href="#h" class="up-button">up</a></h2>
+
     <p><a href="https://github.com/IAmMoltony/NDSvi">NDSvi source code</a></p>
+
     <p>NDSvi is a text editor for the Nintendo DS heavily inspired by Vi. I created it because I wanted to edit some random save file manually for
     <a href="https://iammoltony.github.io/ds-craft/index.html">DS-Craft</a>, but couldn't find a text editor app for the DS, at least not one that
     supported editing arbitrary files. In the middle of making this editor, I discovered that it's possible to edit the
     <a href="https://melonds.kuribo64.net">melonDS</a> emulated SD card files by simply removing the SD card image, editing the synced files in the
     SD card sync folder and then opening the emulator. <small>Does that make sense?..</small></p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h3 id="ap8_o">Overview <a href="#h" class="up-button">up</a></h3>
+
     <img src="img_abandonware/nv.png" alt="NDSvi screenshot. The editor is in insert mode. On the bottom screen is a keyboard with the usual English
     QWERTY layout. The text on the top screen, typed by the user reads 'Hello, world' on the first line, then ':3' on the next line." class="screenshot">
+
     <p class="centered-text"><i>NDSvi running in melonDS</i></p>
+
     <p>This is quite familiar to any of you who use Vim (myself included). The editor is in insert mode, some text is in the buffer, and the touch
     keyboard is there. How nice.</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h3 id="ap8_svf">Supported Vi Features <a href="#h" class="up-button">up</a></h3>
+
     <p>In the state that it's in, NDSvi supports the following features from Vi:<p>
+
     <ol>
         <li>Typing stuff in insert mode</li>
         <li>Support for 'i', 'o', '0', '$', 'O', 'G', 'dd', 'gg', 'yy' and 'p' Vi keys</li>
@@ -482,56 +614,94 @@
         <li>Opening files</li>
         <li>Displaying the version information</li>
     </ol>
+
     <p>Despite supporting many cool Vi features, it doesn't have scrolling, hjkl, and its architecture is overall flawed.</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h2 id="ap9">Abandoned Project Nine: Paint DS <a href="#h" class="up-button">up</a></h2>
+
     <p><a href="https://github.com/IAmMoltony/PaintDS">Paint DS source code</a></p>
+
     <p>PaintDS is a painting program for the Nintendo DS written in C. I created it because, as is the case with NDSvi, I couldn't find a painting
     application for the DS. I stopped developing this one because of two reasons: <i>poor architecture</i> and <i>me not being able to display text,
     like, at all, no matter how hard i tried</i>. Let's take a look at it!</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h3 id="ap9_o">Overview <a href="#h" class="up-button">up</a></h3>
+
     <img src="./img_abandonware/pds.png" alt="Paint DS screenshot. Bottom screen: painting application with color selection and multiple tools. Top
     screen: white lines on a light blue background." class="screenshot">
+
     <p class="centered-text"><i>Paint DS running in melonDS</i></p>
+
     <p>The top screen is the least interesting part. It's just a scrolling line pattern, intended just so that there's something on the top screen.
     All the painting tools are on the bottom screen. On the bottom bar there are four tools: Pencil, Eraser, Fill and Shapes. On the top are the
     tool properties. Let's take a look at each tool.</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h3 id="ap9_pt">Pencil Tool <a href="#h" class="up-button">up</a></h3>
+
     <p>The pencil tool is quite straightforward: touch the screen and draw whatever you like. You can even choose the color you want to draw with!
     There's black, red, green, blue, cyan, magenta, yellow, gray, dark red, dark green, dark blue, dark cyan, dark magenta and dark yellow. If you're
     wondering why there's no white color, that's because the eraser is used to draw in white (we'll look at the eraser in a bit). You can also choose
     the width of the stroke: thin, medium and <b><i>T H I C C</i></b>. And that is all, no more, no less.</p>
+
     <img src="./img_abandonware/pds-drawing.png" alt="A drawing made using Paint DS. It features a person and a sun." class="screenshot">
+
     <p class="centered-text"><i>A (poorly drawn) picture drawn using the Pencil tool.</i></p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h3 id="ap9_et">Eraser Tool <a href="#h" class="up-button">up</a></h3>
+
     <p>The eraser tool is used to erase stuff. By "erase" I mean draw with white. Yeah, this app doesn't support transparency, so that's pretty much
     expected. You can either erase, wipe the whole screen or do a fill eraser (fill with white).</p>
+
     <img src="./img_abandonware/pds-eraser.png" alt="A blank drawing with the eraser tool selected." class="screenshot">
+
     <p class="centered-text"><i>The eraser tool interface</i>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h3 id="ap9_ft">Fill Tool <a href="#h" class="up-button">up</a></h3>
+
     <p>The fill tool is used to... fill. The color can be chosen from the same palette as the pencil tool.</p>
+
     <img src="./img_abandonware/pds-fill.png" alt="A drawing made using Paint DS demonstrating the capabilities of the Fill Tool. It features a pink
     blob character sleeping on what appears to be grass. The night sky is also visible." class="screenshot">
+
     <p class="centered-text"><i>The fill tool in action</i></p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h3 id="ap9_st">Shape Tool <a href="#h" class="up-button">up</a></h3>
+
     <p>The last tool available in Paint DS is the shape tool. It allows for the insertion of one of the five available shapes: triangle outline, filled
     triangle, straight line, rectangle outline and filled rectangle. The color selection is the same as always.</p>
+
     <img src="./img_abandonware/pds-shapes.png" alt="A drawing of a primitive house made using Paint DS, demonstrating the capabilities of the Shape
     Tool." class="screenshot">
-    <p class="centered-text"><i>A primitive house create using the shape tool.</i></p>
+
+    <p class="centered-text"><i>A primitive house created using the shape tool.</i></p>
+
+    <!------------------------------------------------------------------------------------------------->
 
     <h3 id="ap9_sd">Sound Design <a href="#h" class="up-button">up</a></h3>
+
     <p>This thing has one singular sound: the <i>pencil sound</i>. It plays when you draw.</p>
 
+    <!------------------------------------------------------------------------------------------------->
+
     <h3 id="ap9_c">Conclusion <a href="#h" class="up-button">up</a></h3>
+
     <p>Paint DS is an application with huge potential! It can allow people to create art on the go and that's... pretty much it? I don't know how to
     market a painting app. Anyway, this is cool and all but the architecture was absolute garbage. And I couldn't figure out how to draw text on the
     screen.</p>
+
+    <!------------------------------------------------------------------------------------------------->
 
     <h2 id="todo">To-do list <a href="#h" class="up-button">up</a></h2>
     <p><small>of course we have one</small></p>
@@ -542,7 +712,7 @@
     </ul>
 
     <hr>
-    <p><small>this is <i>revision 5.4</i></small></p>
+    <p><small>this is <i>revision 5.4.1</i></small></p>
     <details>
         <summary><b>Revision versioning system</b></summary>
         <p><b>Major version</b> is incremented when a new major change happens, such as adding a new project to the list.</p>
@@ -553,6 +723,13 @@
         <details>
             <summary><b>Revision history</b></summary>
             <ul>
+                <li>
+                    <i>r5.4.1 - June 10, 2024</i>
+                    <ul>
+                        <li>HTML cleanup.</li>
+                        <li>Grammar fixes.</li>
+                    </ul>
+                </li>
                 <li>
                     <i>r5.4 - June 10, 2024</i>
                     <ul>
