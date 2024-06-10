@@ -60,6 +60,9 @@
                             <a href="#ap1_ff">Fun Facts</a>
                         </li>
                         <li>
+                            <a href="#ap1_ur">Unity Remake</a>
+                        </li>
+                        <li>
                             <a href="#ap1_c">Conclusion</a>
                         </li>
                     </ol>
@@ -196,14 +199,13 @@
     are visible: 'Play', 'Help' and 'Exit'." class="screenshot">
     <p class="centered-text"><i>Dodge Them All title screen</i></p>
     <p>This is.. a title screen alright. Also it runs at like 5fps, which is not that surprising considering my system is really
-    slow and the title screen background has bouncing blocks bouncing all over the place.</p>
+    slow and the title screen background has bouncing blocks all over the place.</p>
     <p>Now let's finally look at the gameplay! Pressing play we are greeted to the following.</p>
     <img src="./img_abandonware/dta-firstplay.png" alt="The screen you see when clicking on 'Play' at the title screen. Text below
     describes the image quite well." class="screenshot">
     <p class="centered-text"><i>Dodge Them All gameplay</i></p>
-    <p>First off, the game runs really poorly. But that is probably not the fault of the game having bad optimization, this is
-    just my laptop (which is the same laptop I used to write this game) goofing off. Performance issues aside, let's look at the
-    game. We can see:</p>
+    <p>The game runs quite poorly even outside of the title screen. Really shows that I put zero effort into optimizing this game, doesn't it?
+    Whatever. Right off the bat, we can see:</p>
     <ul>
         <li>A white square. You play as him/them/her.</li>
         <li>A coin. When a coin is collected, you're given some score. The amount of score is calculated by this formula: <b>100 + 10 * (current level - 1)</b></li>
@@ -298,7 +300,7 @@
         </tr>
         <tr>
             <td>Escape</td>
-            <td>Quit the game</td>
+            <td>Quit the game (yes, this is locked behind developer mode)</td>
         </tr>
         <tr>
             <td>R</td>
@@ -347,6 +349,10 @@
         <li>Basically every object in the game that generates random numbers has its own random number generator instead of using a shared one.</li>
     </ol>
 
+    <h3 id="ap1_ur">Unity Remake <a href="#h" class="up-button">up</a></h3>
+    <p>At some point, I started working on a remake of this game using the Unity engine. It had three-dimensional graphics, original sprites
+    and that's as far as I remember of this game. I unfortunately can't show it to you since I lost the source code and don't have any screenshots.</p>
+
     <h3 id="ap1_c">Conclusion <a href="#h" class="up-button">up</a></h3>
     <p>Dodge Them All truly shows how much I have come in game development and programming in general in a relatively short amount of
     time (~3 years). And even if this game isn't that special or that good, it still holds a special place in my heart.</p>
@@ -363,7 +369,7 @@
     so I'll let this one slide.</p>
 
     <h3 id="ap2_tg">The Gameplay <a href="#h" class="up-button">up</a></h3>
-    <p>Unlike the last game, this one runs really well. Maybe the original <i>is</i> badly optimized... Eh, either way, here's the title screen:</p>
+    <p>Unlike the last game, this one runs really well. Here's the title screen:</p>
     <img src="./img_abandonware/dta-rw-title.png" alt="DTARW title screen" class="screenshot">
     <p class="centered-text"><i>DTARW title screen</i></p>
     <p>Do you see it? <b><i>A STYLIZED FONT!!</i></b> Yep, instead of using a default font, this time we have a good font. That is very
@@ -455,9 +461,10 @@
     <h2 id="ap8">Abandoned Project Eight: NDSvi <a href="#h" class="up-button">up</a></h2>
     <p><a href="https://github.com/IAmMoltony/NDSvi">NDSvi source code</a></p>
     <p>NDSvi is a text editor for the Nintendo DS heavily inspired by Vi. I created it because I wanted to edit some random save file manually for
-    <a href="https://iammoltony.github.io/ds-craft/index.html">DS-Craft</a>, but couldn't find a text editor app for the DS. In the middle of making
-    this project, I discovered that it's possible to edit the <a href="https://melonds.kuribo64.net">melonDS</a> emulated SD card files by simply
-    removing the SD card image, editing the synced files in the SD card sync folder and then opening the emulator.</p>
+    <a href="https://iammoltony.github.io/ds-craft/index.html">DS-Craft</a>, but couldn't find a text editor app for the DS, at least not one that
+    supported editing arbitrary files. In the middle of making this editor, I discovered that it's possible to edit the
+    <a href="https://melonds.kuribo64.net">melonDS</a> emulated SD card files by simply removing the SD card image, editing the synced files in the
+    SD card sync folder and then opening the emulator. <small>Does that make sense?..</small></p>
 
     <h3 id="ap8_o">Overview <a href="#h" class="up-button">up</a></h3>
     <img src="img_abandonware/nv.png" alt="NDSvi screenshot. The editor is in insert mode. On the bottom screen is a keyboard with the usual English
@@ -535,11 +542,18 @@
     </ul>
 
     <hr>
-    <p><small>this is <i>revision 5.2</i></small></p>
+    <p><small>this is <i>revision 5.3</i></small></p>
     <div id="revhist">
         <details>
             <summary><b>Revision history</b></summary>
             <ul>
+                <li>
+                    <i>r5.3 - June 10, 2024</i>
+                    <ul>
+                        <li>Minor changes.</li>
+                        <li>Added <a href="#ap1_ur">Dodge Them All Unity Remake</a> section.
+                    </ul>
+                </li>
                 <li>
                     <i>r5.2 - April 26, 2024</i>
                     <ul>
