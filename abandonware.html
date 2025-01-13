@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./abandonwarestyle.css">
     <link rel="shortcut icon" href="Images_FolderIMEAN_directory/FAVICOTONY.png" type="image/png">
-    <title>Moltony's Abandoned Projects (Revision 5.5.2)</title>
+    <title>Moltony's Abandoned Projects (Revision 6)</title>
 </head>
 <body>
     <a href="index.html">&lt; go back to the horriblel index page</a>
@@ -156,6 +156,57 @@
                         </li>
                         <li>
                             <a href="#ap9_c">Conclusion</a>
+                        </li>
+                    </ol>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="#ap10">DS-Craft</a></summary>
+                    <ol>
+                        <li>
+                            <a href="#ap10_als">A little sidenote</a>
+                        </li>
+                        <li>
+                            <a href="#ap10_g">Gameplay</a>
+                        </li>
+                        <li>
+                            <details>
+                                <summary><a href="#ap10_p">Problems</a></summary>
+                                <ol>
+                                    <li>
+                                        <a href="#ap10_p_p1">Problem 1: I don't have a DS</a>
+                                    </li>
+                                    <li>
+                                        <a href="#ap10_p_p2">Problem 2: Stolen assets</a>
+                                    </li>
+                                    <li>
+                                        <details>
+                                            <summary><a href="#ap10_p_p3">Problem 3: Messy code, <i>very much so.</i></a></summary>
+                                            <ol>
+                                                <li>
+                                                    <a href="#ap10_p_p3_g">The Game class</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#ap10_p_p3_p">The Player class</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#ap10_p_p3_iabic">Item and block ID conversions</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#ap10_p_p3_rt">Relevant terminology</a>
+                                                </li>
+                                            </ol>
+                                        </details>
+                                    </li>
+                                    <li>
+                                        <a href="#ap10_p_p4">Problem 4: The handling of bilinguality</a>
+                                    </li>
+                                </ol>
+                            </details>
+                        </li>
+                        <li>
+                            <a href="#ap10_fv">My final verdict</a>
                         </li>
                     </ol>
                 </details>
@@ -716,6 +767,274 @@
     screen.</p>
 
     <!------------------------------------------------------------------------------------------------->
+    
+    <h2 id="ap10">Abandoned Project Ten: DS-Craft <a href="#h" class="up-buttons">up</a></h2>
+
+    <p><a href="https://github.com/IAmMoltony/ds-craft">DS-Craft source code</a></p>
+
+    <p>DS-Craft (not to be confused with other projects sharing a similar name) is a Minecraft demake for the Nintendo DS that coincidentally infringes on copyright.</p>
+
+    <h3 id="ap10_als">A little sidenote</h3>
+
+    <p>I have been putting off this entry since September of last year. But now, I'm actually writing it. I've just been very busy <span class="comically-small-text">playing games and watching anime mostly</span>.</p>
+
+    <h3 id="ap10_g">Gameplay</h3>
+
+    <p>Before diving into why I stopped developing this fairly big project and its technical debt stuff, let's dive into the gameplay of this very buggy and unoptimized mess.</p>
+
+    <p>The version we'll be looking at is <i>beta1.7.1</i>, the last full release. There have been quite a few commits since then but I can't be bothered to install the dev tools on my computer right now.</p>
+
+    <img src="./img_abandonware/dsc.png" alt="DS-Craft title screen." class="screenshot">
+
+    <p class="centered-text"><i>DS-Craft title screen.</i></p>
+
+    <p>What a beautiful title screen. With the logo on the top, three nice buttons and...</p>
+
+    <p>...<i>errors?</i> Right away?</p>
+
+    <p>Well, they don't seem to be causing any harm so let's press play and make a new world. Besides, they go away once the game is restarted, so there's no reason to worry about them.</p>
+
+    <img src="./img_abandonware/dsc_ws.png" alt="DS-Craft world selection screen." class="screenshot">
+
+    <p class="centered-text"><i>World selection screen</i></p>
+
+    <p>What a nice little screen. Unfortunately, we don't have any worlds. Let's make one, then, shall we?</p>
+
+    <img src="./img_abandonware/dsc_cw.png" alt="DS-Craft world creation screen." class="screenshot">
+
+    <p class="centered-text"><i>World creation screen</i></p>
+
+    <p><i>Can you tell I'm a Touhou fan? :)</i></p>
+
+    <p>Anyway, the world has been created. Here's how it looks in the world selection screen:</p>
+
+    <img src="./img_abandonware/dsc_ws2.png" alt="DS-Craft world selection screen, with a world this time." class="screenshot">
+
+    <p class="centered-text"><i>World selection screen with our new world</i></p>
+
+    <p>Let's hop into it, and!..</p>
+
+    <p>...</p>
+
+    <p>It uhh crashed</p>
+
+    <p>I have been aware of this issue for quite some time now, new worlds are sometimes broken. I have not really been able to find a fix to this issue, so the only solution is to make worlds over and over again, hoping that, eventually, one of them will work.</p>
+
+    <p>After what felt like hours of opening the game, creating the world and seeing the dreaded "Shutdown" message, we see this.</p>
+
+    <img src="./img_abandonware/dsc_gaming.png" alt="DS-Craft gameplay screenshot." class="screenshot">
+
+    <p class="centered-text"><i>Epic gameplay</i></p>
+
+    <p>Oh my, what do we see here. This certainly does look like Minecraft, since I literally stole its textures. We also see some glitchy floating grass and the world is casually just chopped off in the middle. There's also a health bar on the bottom and the hotbar of five slots as well.</p>
+
+    <p>This game even has living creatures other than the player in the form of <i>the pig!</i></p>
+
+    <img src="./img_abandonware/dsc_gaming_pig.png" alt="DS-Craft gameplay with a pig visible on the left." class="screenshot">
+
+    <p class="centered-text"><i>Epic pig</i></p>
+
+    <p>Its code is super janky and it often falls off the world, they're not very important anyway.</p>
+
+    <p>Let's build something, this is Minecraft after all. Aiming is done via the touchscreen, moving is done using the D-pad, and the buttons are for different actions. Key bindings are able to be changed in the settings. To build something, we'll need some blocks first.</p>
+
+    <img src="./img_abandonware/dsc_gaming_mining.png" alt="DS-Craft gameplay of some dirt blocks being mined." class="screenshot">
+
+    <p class="centered-text"><i>Mining blocks and stuff</i></p>
+
+    <p>And here's our little dirt shack.</p>
+
+    <img src="./img_abandonware/dsc_gaming_mining.png" alt="DS-Craft gameplay with house." class="screenshot">
+
+    <p class="centered-text"><i>The classic dirt house</i></p>
+
+    <p>Well, that's our little house with no entrance or exit. There are actually doors and trees and other interesting blocks in the game but since I got such an unfortunate world, I only have dirt and flowers. Can't even make any tools! Not like it matters anyway.</p>
+
+    <p>There's much more content in the game that what is covered here, but this isn't really a game journal article, so let's get straight to the:</p>
+
+    <h3 id="ap10_p">Problems <a href="#h" class="up-button">up</a></h3>
+
+    <p>And there's quite a bit, and also many that I may have missed.</p>
+
+    <h4 id="ap10_p_p1">Problem 1: I don't have a DS <a href="#h" class="up-button">up</a></h4>
+
+    <p>Why the hell did I make DS games if I didn't own a DS? For the challenge factor? I can't remember and I don't think it matters. Me not having a real DS, only relying on emulators, has resulted in the game being, at the very least, not very easily installable on the real deal, the only testing the game got was on an emulated environment, where everything <i>Just Works™</i>. I don't make games for this system anymore for reasons that I really hope are obvious now.</p>
+
+    <h4 id="ap10_p_p2">Problem 2: Stolen assets <a href="#h" class="up-button">up</a></h4>
+
+    <p>As mentioned earlier, and very obvious when looking at screenshots, basically every single one of the game's assets is straight-up ripped from Minecraft. Only some textures are changed to fit the limited, flat two-dimensional world. Even the sounds are stolen. I could have taken the textures from some resource pack under a permissive license and found the sounds on something like freesound, but the clueless, young and foolish me at the time didn't really know about copyright too much, so... that doesn't make anything better. Probably makes it worse. Don't be surprised if the repository for the game gets taken down, if it does, I'll try what I can to replace all the assets.</p>
+
+    <h4 id="ap10_p_p3">Problem 3: Messy code, <i>very much so.</i> <a href="#h" class="up-button">up</a></h4>
+
+    <p><i>Slight warning: nerd talk ahead. Do not be confused if you can't understand some sectinos. This is more of a code review more than anything, skip this section if you don't feel like burdening yourself with the technical stuff. I did try to provide explanations for some terms that you can find below this section, but if you don't really get it, that's okay. I don't really get it either.</i></p>
+
+    <p><i>A sidenote slighter than the warning above: all the self roasting is genuine, and I don't know about you, but... I think that's a good thing. Roasting your old self means you have grown as a person. Even if I lean a bit into the negative tone.</i></p>
+
+    <p>This game's code is pretty bad, filled with TODOs, being very long (I'm talking literal thousands of lines for some files) and very unmaintainable.</p>
+
+    <p>We'll bisect the problematic sections. Piece. By. Piece.</p>
+
+    <h5 id="ap10_p_p3_g">The Game class <a href="#h" class="up-button">up</a></h5>
+
+    <p>The Game class<sup>1</sup> is what happens when you shove everything, and I mean <i><u><b>EVERYTHING</b></u></i> together into one, single, unnavigatable, unmaintainable, demonically long file, of 2832 lines that make you wish you had never even started.</p>
+
+    <p><i>makes it sound kind of scary, huh?</i> That's because it is. I still get nightmares from this game's obnoxiously convoluted code.</p>
+
+    <p>When taking a marathon-long stroll in the file, we can notice that every single game state is handled here. This would be fine if all the game states were in their own separate files, having everything neatly organized where it needs to be, but nuh uh. All the code for the UI, all the calls to update blocks and the player, everything is in two giant functions of the Game class: <i>update()</i> and its malevolent sibling, <i>draw()</i>.</p>
+
+    <p>There are also like zero comments<sup>2</sup>, besides the occasional depression-filled cry for help or explaining something very obvious if you have these things called <i>eyes</i>.</p>
+
+    <img src="./img_abandonware/dsc_code_mia.png" alt="Screenshot of the aforementioned Game class. There's a comment at the top stating 'man idk anymore'." class="screenshot">
+
+    <p class="centered-text"><i>Well, me neither!</i></p>
+
+    <p>If I were to rewrite this game class, given infinite time, my current knowledge and some delicious pu'er tea while we're at it, I would split everything into its own file. That would make everything so much easier to maintain and find!</p>
+
+    <h5 id="ap10_p_p3_p">The Player class <a href="#h" class="up-button">up</a></h5>
+
+    <p>The Player class is really important: it handles the player. And also playing block sounds. And the entire HUD. And the sign editing interface (yes, this game has signs that you can write stuff on). And the chest interaction interface. And <i>spawning block particles that appear upon breaking blocks.</i> And maybe some other things I haven't been able to find, but that should give you an idea of how much bloat and crap is inside my poor code.</p>
+
+    <p>Also, the way block placing and breaking is done is borderline stupid. These two actions are both a giant switch statement<sup>3</sup> that just have the exact same code, but the block class is changed to correspond with the item. Madness in its purest form.</p>
+
+    <p>Also (also), something that <i>should</i> at a first glance be handled by the player class - picking up items - is done in the Game class instead??? <i><b>Why is it handled there???</b></i> I am at a loss for words, next terribly written file, please.</p>
+
+    <p>If I were to rewrite this player class under the save conditions as above, I would move everything into its own class. Player in its own class, HUD in its own class, inventory... ahh yeah it's already in its own class. But it's still drawn by the player for some reason, so I'd move the code for drawing inventories into the inventory class as well. That would be nead. And, of course, move every other major feature that the player class does that it probably shouldn't, into its own class.</p>
+
+    <h5 id="ap10_p_p3_iabic">Item and block ID conversions <a href="#h" class="up-button">up</a></h5>
+
+    <p>Item and block ID conversions are necessary for saving the game. IDs of blocks and items are saved in a different way in save files than in the actual game. This isn't something out of the ordinary, conversions tend to happen often in game save files, but they should not be written like in DS-Craft.</p>
+
+    <p>Our current example is item.cpp, a file containing both the implementation for the InventoryItem class (which is pretty straightforward, no complaints here) and the ID conversion functions. We're going to discuss the latter because these are lazy, copy-pasted functions that, while they do work, they are insanely long and kind of not very good.</p>
+
+    <img src="./img_abandonware/dsc_code_its.png" alt="The iidToString function. No comment here." class="screenshot">
+
+    <p class="centered-text"><i>And it just goes on and on and on...</i></p>
+
+    <p>The first function we'll look at iidToString, which, as you might be able to guess, converts an item ID to a string. Save files in this game store the item IDs as strings, not numbers! Why, you might ask? Can't you just turn the enums<sup>4</sup> into numbers (like you already do in some places!) directly? And the answer is yes, yes I can, but Youngtony (let's give this cringe name to past, cringe me) decided to organize the item ID enum by putting related items next to each other. This sounds like a good idea, but here's the catch: if we do this and save the item IDs as numbers directly, when we add a new item, we break existing save files and suddenly the player has all their diamonds replaced with dirt or something. I'll give a visual example as well, so you get it.</p>
+
+    <p>We'll assume that the table below is the item ID enum for version 1 of the game.</p>
+
+    <table>
+        <tr>
+            <th>
+                Item numerical ID
+            </th>
+            <th>
+                Item name
+            </th>
+        </tr>
+        <tr>
+            <td>
+                1
+            </td>
+            <td>
+                Dirt
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2
+            </td>
+            <td>
+                Stone
+            </td>
+        </tr>
+        <tr>
+            <td>
+                3
+            </td>
+            <td>
+                Diamond
+            </td>
+        </tr>
+    </table>
+
+    <p>And now the developer releases version 2 of the game. They add a new item - <i>Watermelons</i>. The developer makes the grave mistake of putting watermelons after stone, however, so the table now looks like this.</p>
+
+    <table>
+        <tr>
+            <th>
+                Item numerical ID
+            </th>
+            <th>
+                Item name
+            </th>
+        </tr>
+        <tr>
+            <td>
+                1
+            </td>
+            <td>
+                Dirt
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2
+            </td>
+            <td>
+                Stone
+            </td>
+        </tr>
+        <tr>
+            <td>
+                3
+            </td>
+            <td>
+                Watermelon
+            </td>
+        </tr>
+        <tr>
+            <td>
+                4
+            </td>
+            <td>
+                Diamond
+            </td>
+        </tr>
+    </table>
+
+    <p>See that? Between version 1 and version 2, item ID 3 became watermelon instead of diamond. Meaning that, if a player opened a world saved back in version 1 in the new version 2, all their diamonds would turn into watermelons. Don't get me wrong, watermelons are cool, but it's so disheartening seeing all your hard-earned diamonds turn into watermelons after updating.</p>
+
+    <p>But this mistake is so easy not to do, it would be more baffling if the it's missed during testing than not. So all I had to do was put all the items after the last one, sure, the code would be a bit messier, but that little messiness makes for way, way less typing every time I add one (1) item.</p>
+
+    <p>If I were to rewrite this, I would just use numerical IDs in the save files. Save so much effort, even if for a bit of disorganization in the enum.</p>
+
+    <h5 id="ap10_p_p3_rt">Relevant terminology <a href="#h" class="up-button">up</a></h5>
+
+    <p id="ap10_p_p3_rt_1"><b>1.</b> A <i>class</i> defines a structure of an object. A class may define what the object can do and what it has. For example, if you have a car class, it can have a <i>honk()</i> function, which, when executed by the program, will make the car honk. Or do anything, actually, because class function names are arbitrary, though they shouldn't be misleading, as that's bad practice.</p>
+
+    <p id="ap10_p_p3_rt_2"><b>2.</b> A <i>comment</i> is some text added in code files that is ignored by the compiler - the thing that turns code into machine code that your computer (or, I guess, in this case, the Nintendo DS) can run. Comments are normally used to help explain what a certain part of the code does, or to mark spots of the code where work needs to be done.</p>
+
+    <p id="ap10_p_p3_rt_3"><b>3.</b> A <i>switch statement</i> is like some signs pointing to code. The signs say, for example, "go to the left if the variable <i>A</i> is set to 1", then "go to the right if the variable <i>A</i> is set to 3", and "go straight until you see a big maple ttree, then turn right if the variable <i>A</i> is set to some other value". It's like that but often on a grander scale.</p>
+
+    <p id="ap10_p_p3_rt_4"><b>4.</b> An <i>enum</i>, or <i>enumeration</i> for long, is like a list of preset values that a variable can have. For example, let's make an enum for pizza toppings. Our enum will have three possible values: <i>Pepperoni</i>, <i>Pineapples</i> (let's really hope no-one chooses that one!) and <i>Sausages</i>. If we create a pizza topping enum variable, we can only choose from one of the three toppings we defined. Under the hood, enums are just giving numbers fancy names, which is why I mention converting item ID enums directly to numbers, because that's essentially what enums are.</p>
+
+    <p>A bit of a bonus fact, enums and switch statements actually go hand-in-hand together.</p>
+
+    <h4 id="ap10_p_p4">Problem 4: The handling of bilinguality <a href="#h" class="up-button">up</a></h4>
+
+    <p>Finally I have finished writing the above section! As for bilinguality, yes, this game supports two languages: English and Russian, with the former being the default. The way it's done is rather clunky to say the least.</p>
+
+    <p>So the game has two fonts: a font for English and a font for Russian. Nothing out of ordinary here. The problem is how they are encoded. Usually Russian (and other non-Latin) characters are renderer using Unicode. Technically Latin scripts use Unicode as well, in most modern contexts. But in DS-Craft, and many older games and software made with languages that use the Latin script as well, we use ASCII. It's <i>way</i> more limited in the amount of characters it can encode than Unicode, because ASCII uses single-byte encoding, and a single byte can only store numbers from 0 to 255 (inclusive). Meanwhile Unicode has the advantage of being a multi-byte encoding, meaning that we can encode thousands upon thousands of different characters, since the bytes add up and allow us to represent bigger and bigger numbers.</p>
+
+    <p>DS-Craft, however, being the rubbishly coded, bug-riddled, questionably designed game that it is, uses ASCII for both. This would've been fine if Russian didn't have 33 letters as opposed to English's 26. So what I did is reserve 7 special characters for letters, and if I wanted to use said special characters, I reserved other special characters that I didn't use for those other special characters that have already been taken.</p>
+
+    <p>The end result is a damn mess. If I were to handle this problem today with my uhh <i>*looks up "synonyms for the word "great"*</i> <u>preeminent, magnanimous, splendiferous</u> knowldege, I would change the font to encompass every Russian letter, then code up a little function that converts from Unicode code points to the letter indexes in the font image. This would make it much cleaner, even if it adds a bit of complexity. The letters can be saved into a pre-computed look-up table too, though, so the overhead should be minimal. Even on an underpowered little handheld system.</p>
+
+    <h3 id="ap10_fv">My final verdict <a href="#h" class="up-button">up</a></h3>
+
+    <p>This game, admittedly, has an uncountable number of flaws. Many flaws that are result of me beig young and foolish, for the most part. I like to think of DS-Craft as not something that stands on its own as a full-fledged game, no, not at all! I like to think of this little game as a learning experience. This game is the first time I have used Git extensively, first time writing a serious C++ project, discovering tons of new tools, such as Doxygen and Cppcheck (which, I shall admit, I over-used on this project). I learned lots and lots of things over the course of this game's development.</p>
+
+    <p>So, here are my final words about this tiny little game.</p>
+
+    <p>It might not be a great game, it might not be the most polished game, it might not be the most fun game, it might not be the most well-written game, it's not an award-winning game, it's not a well-known game, but what matters to me is that it's... mine. It's my learning experience, it's me trying, failing, and learning in the process. Even with all its flaws, broken features, this game really did change me for the better.</p>
+
+    <p>This game will always be in my heart.</p>
+
+    <p>Writing this made me shed a few salty water drops from my eyes. ok bye i really need to go to sleep right about now.......</p>
+
+    <!------------------------------------------------------------------------------------------------->
 
     <h2 id="todo">To-do list <a href="#h" class="up-button">up</a></h2>
     <p><small>of course we have one</small></p>
@@ -726,7 +1045,7 @@
     </ul>
 
     <hr>
-    <p><small>this is <i>revision 5.5.2</i></small></p>
+    <p><small>this is <i>revision 6</i></small></p>
     <div id="revhist">
         <details>
             <summary><b>Revision history</b></summary>
@@ -739,6 +1058,12 @@
             </details>
 
             <ul>
+                <li>
+                    <i>r6 - January 13, 2025</i>
+                    <ul>
+                        <li>Added DS-Craft antry.</li>
+                    </ul>
+                </li>
                 <li>
                     <i>r5.5.2 - July 25, 2024</i>
                     <ul>
