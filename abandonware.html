@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./abandonwarestyle.css">
     <link rel="shortcut icon" href="Images_FolderIMEAN_directory/FAVICOTONY.png" type="image/png">
-    <title>Moltony's Abandoned Projects (Revision 6)</title>
+    <title>Moltony's Abandoned Projects (Revision 6.0.1)</title>
 </head>
 <body>
     <a href="index.html">&lt; go back to the horriblel index page</a>
@@ -844,7 +844,7 @@
 
     <p>And here's our little dirt shack.</p>
 
-    <img src="./img_abandonware/dsc_gaming_mining.png" alt="DS-Craft gameplay with house." class="screenshot">
+    <img src="./img_abandonware/dsc_gaming_house.png" alt="DS-Craft gameplay with house." class="screenshot">
 
     <p class="centered-text"><i>The classic dirt house</i></p>
 
@@ -866,7 +866,7 @@
 
     <h4 id="ap10_p_p3">Problem 3: Messy code, <i>very much so.</i> <a href="#h" class="up-button">up</a></h4>
 
-    <p><i>Slight warning: nerd talk ahead. Do not be confused if you can't understand some sectinos. This is more of a code review more than anything, skip this section if you don't feel like burdening yourself with the technical stuff. I did try to provide explanations for some terms that you can find below this section, but if you don't really get it, that's okay. I don't really get it either.</i></p>
+    <p><i>Slight warning: nerd talk ahead. Do not be confused if you can't understand some sections. This is more of a code review more than anything, skip this section if you don't feel like burdening yourself with the technical stuff. I did try to provide explanations for some terms that you can find below this section, but if you don't really get it, that's okay. I don't really get it either.</i></p>
 
     <p><i>A sidenote slighter than the warning above: all the self roasting is genuine, and I don't know about you, but... I think that's a good thing. Roasting your old self means you have grown as a person. Even if I lean a bit into the negative tone.</i></p>
 
@@ -898,7 +898,7 @@
 
     <p>Also (also), something that <i>should</i> at a first glance be handled by the player class - picking up items - is done in the Game class instead??? <i><b>Why is it handled there???</b></i> I am at a loss for words, next terribly written file, please.</p>
 
-    <p>If I were to rewrite this player class under the save conditions as above, I would move everything into its own class. Player in its own class, HUD in its own class, inventory... ahh yeah it's already in its own class. But it's still drawn by the player for some reason, so I'd move the code for drawing inventories into the inventory class as well. That would be nead. And, of course, move every other major feature that the player class does that it probably shouldn't, into its own class.</p>
+    <p>If I were to rewrite this player class under the save conditions as above, I would move everything into its own class. Player in its own class, HUD in its own class, inventory... ahh yeah it's already in its own class. But it's still drawn by the player for some reason, so I'd move the code for drawing inventories into the inventory class as well. That would be neat. And, of course, move every other major feature that the player class does that it probably shouldn't, into its own class.</p>
 
     <h5 id="ap10_p_p3_iabic">Item and block ID conversions <a href="#h" class="up-button">up</a></h5>
 
@@ -1006,7 +1006,7 @@
 
     <p id="ap10_p_p3_rt_2"><b>2.</b> A <i>comment</i> is some text added in code files that is ignored by the compiler - the thing that turns code into machine code that your computer (or, I guess, in this case, the Nintendo DS) can run. Comments are normally used to help explain what a certain part of the code does, or to mark spots of the code where work needs to be done.</p>
 
-    <p id="ap10_p_p3_rt_3"><b>3.</b> A <i>switch statement</i> is like some signs pointing to code. The signs say, for example, "go to the left if the variable <i>A</i> is set to 1", then "go to the right if the variable <i>A</i> is set to 3", and "go straight until you see a big maple ttree, then turn right if the variable <i>A</i> is set to some other value". It's like that but often on a grander scale.</p>
+    <p id="ap10_p_p3_rt_3"><b>3.</b> A <i>switch statement</i> is like some signs pointing to code. The signs say, for example, "go to the left if the variable <i>A</i> is set to 1", then "go to the right if the variable <i>A</i> is set to 3", and "go straight until you see a big maple tree, then turn right if the variable <i>A</i> is set to some other value". It's like that but often on a grander scale.</p>
 
     <p id="ap10_p_p3_rt_4"><b>4.</b> An <i>enum</i>, or <i>enumeration</i> for long, is like a list of preset values that a variable can have. For example, let's make an enum for pizza toppings. Our enum will have three possible values: <i>Pepperoni</i>, <i>Pineapples</i> (let's really hope no-one chooses that one!) and <i>Sausages</i>. If we create a pizza topping enum variable, we can only choose from one of the three toppings we defined. Under the hood, enums are just giving numbers fancy names, which is why I mention converting item ID enums directly to numbers, because that's essentially what enums are.</p>
 
@@ -1024,7 +1024,7 @@
 
     <h3 id="ap10_fv">My final verdict <a href="#h" class="up-button">up</a></h3>
 
-    <p>This game, admittedly, has an uncountable number of flaws. Many flaws that are result of me beig young and foolish, for the most part. I like to think of DS-Craft as not something that stands on its own as a full-fledged game, no, not at all! I like to think of this little game as a learning experience. This game is the first time I have used Git extensively, first time writing a serious C++ project, discovering tons of new tools, such as Doxygen and Cppcheck (which, I shall admit, I over-used on this project). I learned lots and lots of things over the course of this game's development.</p>
+    <p>This game, admittedly, has an uncountable number of flaws. Many flaws that are result of me being young and foolish, for the most part. I like to think of DS-Craft as not something that stands on its own as a full-fledged game, no, not at all! I like to think of this little game as a learning experience. This game is the first time I have used Git extensively, first time writing a serious C++ project, discovering tons of new tools, such as Doxygen and Cppcheck (which, I shall admit, I over-used on this project). I learned lots and lots of things over the course of this game's development.</p>
 
     <p>So, here are my final words about this tiny little game.</p>
 
@@ -1058,6 +1058,12 @@
             </details>
 
             <ul>
+                <li>
+                    <i>r6.0.1 - January 14, 2025</i>
+                    <ul>
+                        <li>Fixed some mistakes made in the DS-Craft entry.</li>
+                    </ul>
+                </li>
                 <li>
                     <i>r6 - January 13, 2025</i>
                     <ul>
