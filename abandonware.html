@@ -898,7 +898,7 @@
 
     <p>Also (also), something that <i>should</i> at a first glance be handled by the player class - picking up items - is done in the Game class instead??? <i><b>Why is it handled there???</b></i> I am at a loss for words, next terribly written file, please.</p>
 
-    <p>If I were to rewrite this player class under the save conditions as above, I would move everything into its own class. Player in its own class, HUD in its own class, inventory... ahh yeah it's already in its own class. But it's still drawn by the player for some reason, so I'd move the code for drawing inventories into the inventory class as well. That would be neat. And, of course, move every other major feature that the player class does that it probably shouldn't, into its own class.</p>
+    <p>If I were to rewrite this player class under the same conditions as above, I would move everything into its own class. Player in its own class, HUD in its own class, inventory... ahh yeah it's already in its own class. But it's still drawn by the player for some reason, so I'd move the code for drawing inventories into the inventory class as well. That would be neat. And, of course, move every other major feature that the player class does that it probably shouldn't, into its own class.</p>
 
     <h5 id="ap10_p_p3_iabic">Item and block ID conversions <a href="#h" class="up-button">up</a></h5>
 
@@ -996,7 +996,7 @@
 
     <p>See that? Between version 1 and version 2, item ID 3 became watermelon instead of diamond. Meaning that, if a player opened a world saved back in version 1 in the new version 2, all their diamonds would turn into watermelons. Don't get me wrong, watermelons are cool, but it's so disheartening seeing all your hard-earned diamonds turn into watermelons after updating.</p>
 
-    <p>But this mistake is so easy not to do, it would be more baffling if the it's missed during testing than not. So all I had to do was put all the items after the last one, sure, the code would be a bit messier, but that little messiness makes for way, way less typing every time I add one (1) item.</p>
+    <p>But this mistake is so easy not to do, it would be more baffling if it's missed during testing than not. So all I had to do was put all the items after the last one, sure, the code would be a bit messier, but that little messiness makes for way, way less typing every time I add one (1) item.</p>
 
     <p>If I were to rewrite this, I would just use numerical IDs in the save files. Save so much effort, even if for a bit of disorganization in the enum.</p>
 
