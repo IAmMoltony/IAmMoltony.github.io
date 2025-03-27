@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./abandonwarestyle.css">
     <link rel="shortcut icon" href="Images_FolderIMEAN_directory/FAVICOTONY.png" type="image/png">
-    <title>Moltony's Abandoned Projects (Revision 6.0.1)</title>
+    <title>Moltony's Abandoned Projects (Revision 6.0.2)</title>
 </head>
 <body>
     <a href="index.html">&lt; go back to the horriblel index page</a>
@@ -1016,7 +1016,7 @@
 
     <p>Finally I have finished writing the above section! As for bilinguality, yes, this game supports two languages: English and Russian, with the former being the default. The way it's done is rather clunky to say the least.</p>
 
-    <p>So the game has two fonts: a font for English and a font for Russian. Nothing out of ordinary here. The problem is how they are encoded. Usually Russian (and other non-Latin) characters are renderer using Unicode. Technically Latin scripts use Unicode as well, in most modern contexts. But in DS-Craft, and many older games and software made with languages that use the Latin script as well, we use ASCII. It's <i>way</i> more limited in the amount of characters it can encode than Unicode, because ASCII uses single-byte encoding, and a single byte can only store numbers from 0 to 255 (inclusive). Meanwhile Unicode has the advantage of being a multi-byte encoding, meaning that we can encode thousands upon thousands of different characters, since the bytes add up and allow us to represent bigger and bigger numbers.</p>
+    <p>So the game has two fonts: a font for English and a font for Russian. Nothing out of ordinary here. The problem is how they are encoded. Usually Russian (and other non-Latin) characters are rendered using Unicode. Technically Latin scripts use Unicode as well, in most modern contexts. But in DS-Craft, and many older games and software made with languages that use the Latin script as well, we use ASCII. It's <i>way</i> more limited in the amount of characters it can encode than Unicode, because ASCII uses single-byte encoding, and a single byte can only store numbers from 0 to 255 (inclusive). Meanwhile Unicode has the advantage of being a multi-byte encoding, meaning that we can encode thousands upon thousands of different characters, since the bytes add up and allow us to represent bigger and bigger numbers.</p>
 
     <p>DS-Craft, however, being the rubbishly coded, bug-riddled, questionably designed game that it is, uses ASCII for both. This would've been fine if Russian didn't have 33 letters as opposed to English's 26. So what I did is reserve 7 special characters for letters, and if I wanted to use said special characters, I reserved other special characters that I didn't use for those other special characters that have already been taken.</p>
 
@@ -1045,7 +1045,7 @@
     </ul>
 
     <hr>
-    <p><small>this is <i>revision 6</i></small></p>
+    <p><small>this is <i>revision 6.0.2</i></small></p>
     <div id="revhist">
         <details>
             <summary><b>Revision history</b></summary>
@@ -1058,6 +1058,12 @@
             </details>
 
             <ul>
+                <li>
+                    <i>r6.0.2 - March 27, 2025</i>
+                    <ul>
+                        <li>Fixed typo.</li>
+                    </ul>
+                </li>
                 <li>
                     <i>r6.0.1 - January 14, 2025</i>
                     <ul>
